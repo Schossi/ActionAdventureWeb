@@ -11,14 +11,19 @@ demos:
 manual:
   - title: "Overview"
     url: /manual
-    children:
-      - title: "Release Notes"
-        url: /manual/releases
-  - title: "Core"
+  - title: "Core Concepts"
     children:
       - title: "Character"
-        url: /manual/core/character
-  - title: "Souls"
-    children:
-      - title: "Character"
-        url: /manual/souls/character
+        url: /manual/character
+      - title: "Acting"
+        url: /manual/acting
+      - title: "Item"
+        url: /manual/item
+      - title: "Attribute"
+        url: /manual/attribute
+      - title: "Resource"
+        url: /manual/resource
+      - title: "Movement"
+        url: /manual/movement
+      - title: "Persistence"
+        url: /manual/persistence

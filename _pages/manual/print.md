@@ -27,11 +27,8 @@ sidebar:
 
 
 - [Overview](#overview)  
-- [Release Notes](#release-notes)  
-- Core
-  - [Character](#core-character)
-- Souls
-  - [Character](#souls-character)
+- [Character](#character)
+- [Character](#acting)
 
 <div style="page-break-after: always;"></div>
 
@@ -45,10 +42,10 @@ sidebar:
 
 <div style="page-break-after: always;"></div>  
 
-# Core-Character  
-{% include_relative core/character.md %}  
+# Character  
+{% include_relative content/character.md %}  
 
 <div style="page-break-after: always;"></div>  
 
-# Souls-Character  
-{% include_relative souls/character.md %}  
+# Acting  
+{% include_relative content/acting.md %}  
