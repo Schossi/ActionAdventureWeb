@@ -11,7 +11,7 @@ sidebar:
 
 ## Core
 
- Characters are the brains of the operation for any entity in the world be it player or npc. They tie all the other concepts together and implement any logic the belongs to a specific character but does not fit any of the other concepts.(input for players, ai for enemies)  
+ Characters are the brains of the operation for any entity in the world be it player or NPC. They tie all the other concepts together and implement any logic the belongs to a specific character but does not fit any of the other concepts.(input for players, AI for enemies)  
 
 CharacterBase has explicit fields for AttributePool and ResourcePool since these probably wont be inherited from. The actor, movement and inventory implementation can be freely defined when inheriting. CharacterBaseTyped/AnimatedCharacterBase define the fields for theses in a generic manner which makes them convenient to inherit from.  
 
@@ -25,4 +25,7 @@ CharacterInstruction(or CharacterInstruction[]) can be used as an inspector fiel
 
 ## Souls
 
-The souls demo implements SoulsCharacterBase which provides some common stagger, guard and parry logic. The SoulsPlayerCharacter manages input(movement, lockon, menu, ...), xp recovery and character reset(bonfire). SoulsEnemyCharacter is a very simple enemy that approaches the player and attacks and the SoulsMorningstar character is a specific boss enemy that chooses its attacks based on the position of the player.
+- SoulsCharacterBase provides some common stagger, guard and parry logic
+  - SoulsPlayerCharacter manages input(movement, lock-on, menu, ...), XP recovery and character reset(bonfire)  
+  - SoulsEnemyCharacter is a very simple enemy that approaches the player and attacks
+  - SoulsMorningstar character is a specific boss enemy that chooses its attacks based on the position of the player.
