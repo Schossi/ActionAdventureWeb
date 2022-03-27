@@ -1,0 +1,24 @@
+main:
+  - title: "Demo"
+    url: /demos/souls
+  - title: "Manual"
+    url: /manual
+    
+demos:
+  - title: "Souls"
+    url: /demos/demoSouls
+
+manual:
+  - title: "Overview"
+    url: /manual
+    children:
+      - title: "Release Notes"
+        url: /manual/releases
+  - title: "Core"
+    children:
+      - title: "Character"
+        url: /manual/core/character
+  - title: "Souls"
+    children:
+      - title: "Character"
+        url: /manual/souls/character
