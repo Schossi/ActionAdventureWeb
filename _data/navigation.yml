@@ -11,7 +11,7 @@ demos:
 manual:
   - title: "Overview"
     url: /manual
-  - title: "Core Concepts"
+  - title: "Systems"
     children:
       - title: "Character"
         url: /manual/character
