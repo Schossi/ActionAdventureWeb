@@ -8,12 +8,6 @@ sidebar:
 
 ## Core
 
-### Actor
-
-A character actors manages a stream of actions for a character. That means taking care of how and when they are started and ended as well as forwarding the appropriate messages to them.  
-
-CharacterActorBase can technically accommodate more than one active action at a time but the most common scenario is that actions are performed one after the other rather than parallel. SerialCharacterActor serves as a good base class for these scenarios. Both the MinimalCharacterActor(ai) and BufferedCharacterActor(player) inherit from it.  
-
 ### Action
 
 An action is basically anything a character can do that may occupy it for a while.  
@@ -27,6 +21,12 @@ __OnStart__ is called by the actor when the action is actually started so this i
 __CanEnd__ defines if an action can be ended by the outside even though it has not ended itself yet.  
 __OnEnd__ is called by the actor when the action is ended. This is where things are reset for reusable actions or when actions are destroyed if they are one time.  
 __OnMessage__ is where messages from the character will be directed when the action is active. For example events from the animator that are needed so the action knows when it has ended. 
+
+### Actor
+
+A character actors manages a stream of actions for a character. That means taking care of how and when they are started and ended as well as forwarding the appropriate messages to them.  
+
+CharacterActorBase can technically accommodate more than one active action at a time but the most common scenario is that actions are performed one after the other rather than parallel. SerialCharacterActor serves as a good base class for these scenarios. Both the MinimalCharacterActor(ai) and BufferedCharacterActor(player) inherit from it.  
 
 ## Souls
 
