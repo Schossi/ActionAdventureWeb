@@ -20,11 +20,21 @@ Since AAK goes for a broad base of functionality rather than something more spec
 
 AAK is separated into multiple projects.
 
-* AdventureCore  
-The Core Framework of AAK, always import this one.
+### AdventureCore
 
-* AdventureSouls  
+The Core Framework of AAK, always import this one.  
+
+### AdventureSouls
+
 Contains the [soulslike]({% link _pages/demos/demoSouls.md %}) demo, import if you want to start by adapting this demo.  
+
+Start up Scenes/Title/SoulsTitle to __start the game from the title screen__ just like the demo does.  
+
+To __jump directly into the game__ open Scenes/Dungeon/SoulsDungeon for the level itself, add Scenes/Dungeon/SoulsDungeonTemp for the temporary parts like enemies and crates.  
+
+Scenes/Debugging/SoulsDebuggingGeneral is a __useful scene for testing__ out all the actions and Scenes/Debugging/Enemies/SoulsDebuggingEnemies can be used to debug combat.  
+
+Scenes/Debugging/Interaction/SoulsDebuggingInteraction can be useful to __synchronize the character with some object they are interacting with__, this is done using timelines. 
 
 ## Manual
 
