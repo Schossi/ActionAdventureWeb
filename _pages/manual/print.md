@@ -25,10 +25,14 @@ sidebar:
 
 <div style="page-break-after: always;"></div>  
 
-
 - [Overview](#overview)  
 - [Character](#character)
-- [Character](#acting)
+- [Acting](#acting)
+- [Item](#item)
+- [Attribute](#attribute)
+- [Resource](#resource)
+- [Movement](#movement)
+- [Persistence](#persistence)
 
 <div style="page-break-after: always;"></div>
 
@@ -49,3 +53,28 @@ sidebar:
 
 # Acting  
 {% include_relative content/acting.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Item  
+{% include_relative content/item.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Attribute  
+{% include_relative content/attribute.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Resource  
+{% include_relative content/resource.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Movement  
+{% include_relative content/movement.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Persistence  
+{% include_relative content/persistence.md %}  
