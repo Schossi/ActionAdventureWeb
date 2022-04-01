@@ -26,14 +26,14 @@ values that may be used up by an action or damaged somehow
 responsible for moving the character around the world
 - Persistence  
 saves the state of characters, environment, save games, settings, ...
-- Damage (Physical, ...)
+- Damage (Physical, ...)  
 damage events created from triggers or actions are passed from senders to receivers  
 
 <p align="center">
   <img src="/assets/images/Title1080.png" />
 </p>
 
-AdventureSouls demonstrates the systems of AdventureCore in a simple souls-like ARPG. Some of its feature highlights are:  
+AdventureSouls demonstrates the systems of AdventureCore in a simple souls-like. Some of the feature highlights are:  
 
 - Player Character
   - weapons with unique actions per item and equipped slot(left, right) 
@@ -47,7 +47,7 @@ AdventureSouls demonstrates the systems of AdventureCore in a simple souls-like 
   - death drops XP and resets player to bonfire
 - Objects
   - doors, chests, levers
-  - destructible chests and dummies
+  - destructible crates and dummies
   - traps that shoot spikes
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KigI2D7rjyc" title="AdventureSouls Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
