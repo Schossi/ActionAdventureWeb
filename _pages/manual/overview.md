@@ -36,6 +36,8 @@ Scenes/Debugging/SoulsDebuggingGeneral is a __useful scene for testing__ out all
 
 Scenes/Debugging/Interaction/SoulsDebuggingInteraction can be useful to __synchronize the character with some object they are interacting with__, this is done using timelines. 
 
+The models in this demo were made using blender and then exported to fbx for unity. You can find the original blend files and the used export settings in AdventureSouls/AdventureSoulsBlender.zip.
+
 ## Manual
 
 This manual is meant to explain the concepts and ideas of AAK rather then any specific detailed API. For more detailed explanations of every class in the core framework and most of the demo please consult the code itself. I try to give a detailed explanation for the purpose of the class in the xml-doc of the class itself and explain every field of the behaviors in the tooltip.  
