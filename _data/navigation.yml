@@ -27,3 +27,5 @@ manual:
         url: /manual/movement
       - title: "Persistence"
         url: /manual/persistence
+      - title: "Damage"
+        url: /manual/damage

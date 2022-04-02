@@ -37,7 +37,7 @@ Attacks in AdventureSouls have a custom implementation called SoulsAttackAction.
 Attacks __CanStart__ when the character has enough stamina and either the action has not started or when it has and it CanCombo. __OnStart__ it triggers an animation and adds an instruction that suspends the characters regular movement so that only the root motion from the animation is used. It also removes the used stamina from the character.  
 
 It responds to the following in __OnMessage__  
-START confirms that the animation has actually started, this makes sure we are not responding to events from the wrong animation.  
+START confirms that the animation has actually started, this makes sure we are not responding to messages from the wrong animation.  
 DMG_ON/DMG_OFF control whether the damage on the weapon is turned on.
 COMBO is sent when the animation is ready to transition to the next swing.  
 END means the animation has ended and the action should end.  
@@ -48,12 +48,12 @@ __CanEnd__ is true when the attack CanCombo and the next action is that same att
 
 The roll in AdventureSouls uses an action from AdventureCore called MotionAction. This action is useful for rolls, jumps and any other moves that are based on a character animation.
 
-__CanStart__ returns true when is has no cost or when the character has any of the demanded resources left. __OnStart__ removed the cost from the character and sets the animation trigger. If AlignCharacter is checks(which is the case for a roll) the motion calls AlignToInput on the characters movement which. Without this the player would not be able to change direction when rolling multiple times in a row because movement is always suspended.  
+__CanStart__ returns true when is has no cost or when the character has any of the demanded resources left. __OnStart__ removes the cost from the character and sets the animation trigger. If AlignCharacter is checked(which is the case for a roll) the motion calls AlignToInput on the characters movement. Without this the player would not be able to change direction when rolling multiple times in a row because movement is always suspended.  
 
 __CanEnd__ is true when RELEASE has been received by __OnMessage__ so we can transition into the next roll before it has ended. __OnEnd__ just resets things.  
 
 ### Gate
 
-The gate in AdventureSouls uses an action from AdventureCore called ObjectAction. This is a good action for interacting with objects in the world. It supports one animation on an object you're interacting with and another(optional) one on an object that should move in the end. Is is useful for doors, levers and chests.
+The gate in AdventureSouls uses an action from AdventureCore called ObjectAction. This is a good action for interacting with objects in the world. It supports one animation on an object you're interacting with and another(optional) one on an object that should move in the end. It is useful for doors, levers and chests.
 
 An ObjectAction __CanStart__ always unless there is a cost item defined the character does not have. __OnStart__ it moves the character into place and triggers its animation. When ACT is received in __OnMessage__ it starts the animation on the lever and in __OnEnd__ it starts the one on the gate.
