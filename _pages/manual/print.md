@@ -33,6 +33,7 @@ sidebar:
 - [Resource](#resource)
 - [Movement](#movement)
 - [Persistence](#persistence)
+- [Damage](#damage)
 
 <div style="page-break-after: always;"></div>
 
@@ -78,3 +79,8 @@ sidebar:
 
 # Persistence  
 {% include_relative content/persistence.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Damage  
+{% include_relative content/damage.md %}  
