@@ -25,15 +25,19 @@ sidebar:
 
 <div style="page-break-after: always;"></div>  
 
-- [Overview](#overview)  
-- [Character](#character)
-- [Acting](#acting)
-- [Item](#item)
-- [Attribute](#attribute)
-- [Resource](#resource)
-- [Movement](#movement)
-- [Persistence](#persistence)
-- [Damage](#damage)
+- [Overview](#overview)
+  - [Release Notes](#release-notes)  
+- Systems  
+  - [Character](#character)
+  - [Acting](#acting)
+  - [Item](#item)
+  - [Attribute](#attribute)
+  - [Resource](#resource)
+  - [Movement](#movement)
+  - [Persistence](#persistence)
+  - [Damage](#damage)
+- Souls
+  - [Player](#soulsplayer)
 
 <div style="page-break-after: always;"></div>
 
@@ -84,3 +88,8 @@ sidebar:
 
 # Damage  
 {% include_relative content/damage.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Souls Player  
+{% include_relative souls/player.md %}  

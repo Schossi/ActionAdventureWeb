@@ -44,6 +44,8 @@ This manual is meant to explain the concepts and ideas of AAK rather then any sp
 
 The manual pages for the core systems of AAK are always split into a Core part that explains the idea behind the system and a Souls part that covers how the system was used in that demo.
 
+The Souls section of the manual contains some additional information about how the AdventureSouls demo is set up and how it may be extended.
+
 ## Roadmap
 
 At least the first update will focus on rounding out and polishing the current core functionality and the souls demo. After that I will most likely start on a second demo game(OoT?, 2d?). Feel free to let me know if you have some features or game types that you'd like to see in the future.

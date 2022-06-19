@@ -7,7 +7,9 @@ main:
 demos:
   - title: "Souls"
     url: /demos/demoSouls
-
+    children:
+      - title: "Release Notes"
+        url: /manual/releases
 manual:
   - title: "Overview"
     url: /manual
@@ -29,3 +31,7 @@ manual:
         url: /manual/persistence
       - title: "Damage"
         url: /manual/damage
+  - title: "Souls"
+    children:
+      - title: "Player"
+        url: /manual/souls-player
