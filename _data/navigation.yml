@@ -7,12 +7,12 @@ main:
 demos:
   - title: "Souls"
     url: /demos/demoSouls
-    children:
-      - title: "Release Notes"
-        url: /manual/releases
 manual:
   - title: "Overview"
     url: /manual
+    children:
+      - title: "Release Notes"
+        url: /manual/releases
   - title: "Systems"
     children:
       - title: "Character"

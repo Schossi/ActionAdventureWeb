@@ -38,6 +38,20 @@ Scenes/Debugging/Interaction/SoulsDebuggingInteraction can be useful to __synchr
 
 The models in this demo were made using blender and then exported to fbx for unity. You can find the original blend files and the used export settings in AdventureSouls/AdventureSoulsBlender.zip.
 
+### Dependencies
+
+__AdventureCore__
+- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.3/manual/index.html) allows binding character actions directly to inputs
+- [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html) used to provide a character action that waits for a timeline to finish
+- [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) used in a helper that performs camera locking using two virtual cameras
+
+__AdventureSouls__
+- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.3/manual/index.html) for all the player inputs
+- [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html) for the intro and bonfire actions
+- [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) for the main camera
+- [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html)
+- [ProBuilder](https://docs.unity3d.com/Packages/com.unity.probuilder@5.0/manual/index.html) used to build the environments
+
 ## Manual
 
 This manual is meant to explain the concepts and ideas of AAK rather then any specific detailed API. For more detailed explanations of every class in the core framework and most of the demo please consult the code itself. I try to give a detailed explanation for the purpose of the class in the xml-doc of the class itself and explain every field of the behaviors in the tooltip.  
