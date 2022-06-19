@@ -12,8 +12,7 @@ __The minimum supported version of Unity for AAK is now 2021.3.4__
 
 ### ADDED
 
-- documentation for the SoulsSetup and SoulsPlayer prefabs
-  - the souls player page contains a step by step example for player model replacement
+- documentation for SoulsPlayer prefab including a step by step guide for replacing the model
 
 ### CHANGED
 
