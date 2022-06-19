@@ -8,11 +8,9 @@ sidebar:
 
 ## 1.0.1
 
-__The minimum supported version of Unity for AAK is now 2021.3.4__
-
 ### ADDED
 
-- documentation for SoulsPlayer prefab including a step by step guide for replacing the model
+- manual page for SoulsPlayer(includes step by step guide for replacing the model)
 
 ### CHANGED
 
@@ -27,6 +25,8 @@ __The minimum supported version of Unity for AAK is now 2021.3.4__
   - SoulsAttackAction no longer locks rotation until damage is activated
 - MovementSaver can be overridden from outside
   - BossArena uses this to properly reset the player if the game is quit during a fight
+- intro sequence can now be skipped
+- 2021 LTS compatibility
 
 ### FIXED
 
