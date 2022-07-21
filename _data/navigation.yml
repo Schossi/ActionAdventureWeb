@@ -25,6 +25,8 @@ manual:
         url: /manual/attribute
       - title: "Resource"
         url: /manual/resource
+      - title: "Effect"
+        url: /manual/effect
       - title: "Movement"
         url: /manual/movement
       - title: "Persistence"

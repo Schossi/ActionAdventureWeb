@@ -76,6 +76,11 @@ sidebar:
 
 <div style="page-break-after: always;"></div>  
 
+# Effect  
+{% include_relative content/effect.md %}  
+
+<div style="page-break-after: always;"></div>  
+
 # Movement  
 {% include_relative content/movement.md %}  
 
