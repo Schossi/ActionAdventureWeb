@@ -25,7 +25,9 @@ CharacterInstruction(or CharacterInstruction[]) can be used as an inspector fiel
 
 ## Souls
 
-- SoulsCharacterBase provides some common stagger, guard and parry logic
-  - SoulsPlayerCharacter manages input(movement, lock-on, menu, ...), XP recovery and character reset(bonfire)  
-  - SoulsEnemyCharacter is a very simple enemy that approaches the player and attacks
-  - SoulsMorningstar character is a specific boss enemy that chooses its attacks based on the position of the player.
+- __SoulsCharacterBase__ provides some common defense, stagger, guard and parry logic
+  - __SoulsPlayerCharacter__ manages input(movement, lock-on, menu, ...), XP recovery and character reset(bonfire)  
+  - __SoulsMorningstar__ character is a specific boss enemy that chooses its attacks based on the position of the player.
+  - __SoulsNonPlayerCharacter__ base that provides some default behavior for simple NPC characters
+    - __SoulsEnemyCharacter__ attacks when something enters its trigger area
+    - __SoulsFriendCharacter__ has some additional objects(talk, trade) when idle and only attacks when damaged

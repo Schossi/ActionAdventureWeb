@@ -98,3 +98,8 @@ sidebar:
 
 # Souls Player  
 {% include_relative souls/player.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Souls Scenes  
+{% include_relative souls/scenes.md %}  

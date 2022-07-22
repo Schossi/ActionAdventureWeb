@@ -37,3 +37,5 @@ manual:
     children:
       - title: "Player"
         url: /manual/souls-player
+      - title: "Scenes"
+        url: /manual/souls-scenes
