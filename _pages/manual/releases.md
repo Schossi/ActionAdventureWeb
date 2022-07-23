@@ -6,6 +6,45 @@ sidebar:
   nav: manual
 ---
 
+## 1.1.0
+
+### ADDED
+
+- __Shrine__ - New Souls Demo Stage!
+  - Trader and Talker NPCs  
+  can be interacted with or attacked
+  - Sprout Enemy  
+  causes poison damage
+  - Elevator  
+  one way elevator with levers
+  - Teleporter  
+  moves character between scenes
+- __Effects__ - New Core System!  
+set of behaviors that can be added or removed from characters
+  - Poisoned  
+    periodically causes damage, healed by the new moss item
+  - Boosted  
+    doubles strength for a while, added by the new booster item
+- Inventory  
+  allows using items directly from the UI without equipping them
+- Loading Screen
+
+### IMPROVED
+
+- intro can now be skipped
+- NPCs can return home or patrol when idle
+- additional events for characters on GenericTriggerArea/Item
+- better gamepad support
+- movement and resources are not saved unless they actually change
+- picked up items are now displayed in a message box
+- persistence can now be exported and imported from PersistenceContainer
+- boss arena properly resets player position
+- ...
+
+--WARNING--  
+Depending on your depth of use this update will contain a varying amount of breaking changes!
+Using source control and removing any previous versions completely when upgrading is recommended.
+
 ## 1.0.1
 
 ### ADDED
