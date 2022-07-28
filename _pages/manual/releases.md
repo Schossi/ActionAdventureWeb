@@ -41,6 +41,8 @@ set of behaviors that can be added or removed from characters
 - boss arena properly resets player position
 - ...
 
+A new integration for the __ink__ narrative scripting language is available on [GitHub](https://github.com/Schossi/AAK_Ink)! 
+
 --WARNING--  
 Depending on your depth of use this update will contain a varying amount of breaking changes!
 Using source control and removing any previous versions completely when upgrading is recommended.

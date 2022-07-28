@@ -22,6 +22,8 @@ objects that are put into an inventory and may be equipped or used
 values that define a characters capabilities
 - Resources (Health, Endurance, ...)  
 values that may be used up by an action or damaged somehow
+- Effects (Poisoned, Slowed, ...)  
+additional behaviors that can be added to characters
 - Movement (CharacterController, NavMesh)  
 responsible for moving the character around the world
 - Persistence  
@@ -60,3 +62,7 @@ Action Adventure Kit takes full advantage of the modern Unity ecosystem and trie
 - Cinemachine
 - Timeline
 - ProBuilder
+
+In the same vain I also provide integrations for external system on GitHub. 
+
+- [__ink__ narrative scripting language](https://github.com/Schossi/AAK_Ink)
