@@ -33,11 +33,13 @@ sidebar:
   - [Item](#item)
   - [Attribute](#attribute)
   - [Resource](#resource)
+  - [Effect](#effect)
   - [Movement](#movement)
   - [Persistence](#persistence)
   - [Damage](#damage)
 - Souls
   - [Player](#soulsplayer)
+  - [Scenes](#soulsscenes)
 
 <div style="page-break-after: always;"></div>
 
