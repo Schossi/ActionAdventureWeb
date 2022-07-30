@@ -62,7 +62,7 @@ The Souls section of the manual contains some additional information about how t
 
 ## Roadmap
 
-At least the first update will focus on rounding out and polishing the current core functionality and the souls demo. After that I will most likely start on a second demo game(OoT?, 2d?). Feel free to let me know if you have some features or game types that you'd like to see in the future.
+There will be one more update that focuses on rounding out and polishing the current core functionality and the souls demo. After that I will most likely start on a second demo game(OoT?, 2d?). Feel free to let me know if you have some features or game types that you'd like to see in the future.
 
 ## Feedback
 

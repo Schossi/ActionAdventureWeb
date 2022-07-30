@@ -39,9 +39,10 @@ set of behaviors that can be added or removed from characters
 - picked up items are now displayed in a message box
 - persistence can now be exported and imported from PersistenceContainer
 - boss arena properly resets player position
+- camera now uses cinemachine free look
 - ...
 
-A new integration for the __ink__ narrative scripting language is available on [GitHub](https://github.com/Schossi/AAK_Ink)! 
+An integration for the __ink__ narrative scripting language is available on [GitHub](https://github.com/Schossi/AAK_Ink)! 
 
 --WARNING--  
 Depending on your depth of use this update will contain a varying amount of breaking changes!
