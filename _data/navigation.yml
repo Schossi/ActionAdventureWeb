@@ -6,7 +6,7 @@ main:
     
 demos:
   - title: "Souls"
-    url: /demos/demoSouls
+    url: /demos/souls
 manual:
   - title: "Overview"
     url: /manual

@@ -111,4 +111,6 @@ The main script at work here is __AnimationToggler__ which is used to toggle an 
 
 When the elevator starts moving it activates a CharacterCarrierArea which reparents the player to itself and suspends its movement persistence. It also writes to Shrine_Elevator_Enabled which deactivates the NPCs at the bottom and activates the ones on the top on the next reload.
 
+The NPCs at the Top use the same persistence key as the ones at the bottom so their values will carry over. The only exception is movement which uses a different persister on the ones at the top so the position does no carry over.
+
 Finally the top also contains a teleported that leads back to the dungeon stage. This teleporter has TeleportTarget set so the player will be moved to that transform in the dungeon stage.
