@@ -60,6 +60,13 @@ The manual pages for the core systems of AAK are always split into a Core part t
 
 The Souls section of the manual contains some additional information about how the AdventureSouls demo is set up and how it may be extended.
 
+## Integrations
+
+- [SceneConnector](https://github.com/Schossi/ConnectorSouls) multi scene management
+- [Ink](https://github.com/Schossi/AAK_Ink) narrative scripting language
+
+All GitHub repositories related to my unity assets can be found in the [Softleitner Extras](https://github.com/stars/Schossi/lists/softleitner-extras) list. I generally try to keep the main ones updated but some of the minor ones may be out of date.
+
 ## Roadmap
 
 There will be one more update that focuses on rounding out and polishing the current core functionality and the souls demo. After that I will most likely start on a second demo game(OoT?, 2d?). Feel free to let me know if you have some features or game types that you'd like to see in the future.

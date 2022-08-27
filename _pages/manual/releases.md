@@ -6,6 +6,22 @@ sidebar:
   nav: manual
 ---
 
+## 1.1.1
+
+Various smaller changes made for the AdventureSouls Scene Connector integration example. The example is called ConnectorSouls and can be found on [GitHub](https://github.com/Schossi/ConnectorSouls)!  
+
+### IMPROVED
+
+- TimelineAction and SoulsBonfireAction auto bind CinemachineBrain to PlayableDirector 
+- AnimationToggler can be moved instantly using SetA and SetB
+- SoulsLadderAction EndingTop and EndingBottom events
+- SoulsLoading can be configured to load additional scenes
+- SoulsPlayerCharacter multi scene support
+  - saves current scene as checkpoint
+  - goes to loading screen on death in a different scene
+  - recovery is instantiated under SoulsCommons
+- EffectPool and ResourcePool persist immediately when reset
+
 ## 1.1.0
 
 ### ADDED
