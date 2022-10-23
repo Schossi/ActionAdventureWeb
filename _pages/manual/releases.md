@@ -12,6 +12,7 @@ Some minor changes, loosely related to the new Kinematic Character Controller in
 ### FIXED
 
 - Camera damping in souls demo
+- SoulsBossArea not properly resetting on player death
 - MotionAction without cost now works on characters without ResourcePool
 
 ### IMPROVED
