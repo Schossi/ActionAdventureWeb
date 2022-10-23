@@ -64,6 +64,7 @@ The Souls section of the manual contains some additional information about how t
 
 - [SceneConnector](https://github.com/Schossi/ConnectorSouls) multi scene management
 - [Ink](https://github.com/Schossi/AAK_Ink) narrative scripting language
+- [KinematicCharacterController](https://github.com/Schossi/AAK_KinematicCharacterController)
 
 All GitHub repositories related to my unity assets can be found in the [Softleitner Extras](https://github.com/stars/Schossi/lists/softleitner-extras) list. I generally try to keep the main ones updated but some of the minor ones may be out of date.
 

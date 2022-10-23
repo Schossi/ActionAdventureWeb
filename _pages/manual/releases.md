@@ -6,6 +6,20 @@ sidebar:
   nav: manual
 ---
 
+## 1.1.2
+Some minor changes, loosely related to the new Kinematic Character Controller integration example which is now live on [GitHub](https://github.com/Schossi/AAK_KinematicCharacterController)!  
+
+### FIXED
+
+- Camera damping in souls demo
+- MotionAction without cost now works on characters without ResourcePool
+
+### IMPROVED
+
+- MovementBasePersisted does not error if no Persister is set
+- LockableCameraFreeLook can move a target group member instead of adding the lock point
+- LockOnManager can directly parent a visual to the locked point
+
 ## 1.1.1
 
 Various smaller changes made for the AdventureSouls Scene Connector integration example. The example is called ConnectorSouls and can be found on [GitHub](https://github.com/Schossi/ConnectorSouls)!  
