@@ -34,6 +34,8 @@ This update continues building out the souls demo while polishing up the core fr
 - LockableCameraFreeLook can move a target group member instead of adding the lock point
 - LockOnManager can directly parent a visual to the locked point
 
+Starting from this version I will no longer upload a dedicated version for the 2021.2 tech stream. I recommend using the latest 2021.3 LTS version.
+
 ## 1.1.1
 
 Various smaller changes made for the AdventureSouls Scene Connector integration example. The example is called ConnectorSouls and can be found on [GitHub](https://github.com/Schossi/ConnectorSouls)!  
