@@ -10,6 +10,8 @@ Be sure to import at least the AdventureCore and AdventureManual projects to che
 
 The __GSFinished__ scene contains the fully finished project, __GSStepByStep__ has a deactivated gameobject for the state after each step and the __GSEmpty__ scene only contains the environment and can be used to start from scratch when following this page.
 
+![Property](/assets/images/GettingStarted.png)
+
 ## 1 Movement
 
 First off we'll just get a character moving around the environment.
