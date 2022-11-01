@@ -26,6 +26,7 @@ This update continues building out the souls demo while polishing up the core fr
 - Camera damping in souls demo
 - SoulsBossArea not properly resetting on player death
 - MotionAction without cost now works on characters without ResourcePool
+- Namespace of SoulsHideHUDInstruction which unfortunately breaks references so it has to be reassigned or fixed in text
 
 ### IMPROVED
 

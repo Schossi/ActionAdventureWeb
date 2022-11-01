@@ -26,3 +26,6 @@ sidebar:
 |Dodge    |LCtrl    |B          |
 |Jump     |Space    |Y          |
 |Menu     |Tab      |Menu       |
+|Confirm  |Enter    |A          |
+
+The Debug button on the Title screen leads to a scene which demonstrated a lot of the features in a more condensed form.
