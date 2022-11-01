@@ -24,6 +24,10 @@ AAK is separated into multiple projects.
 
 The Core Framework of AAK, always import this one.  
 
+### AdventureManual
+
+Contains the [getting started]({% link _pages/manual/howto/gettingStarted.md %}) project. Recommended to learn about the various systems of AAK in a minimal environment before jumping into the more complex souls demo.  
+
 ### AdventureSouls
 
 Contains the [soulslike]({% link _pages/demos/demoSouls.md %}) demo, import if you want to start by adapting this demo.  
@@ -41,12 +45,16 @@ The models in this demo were made using blender and then exported to fbx for uni
 ### Dependencies
 
 __AdventureCore__
-- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.3/manual/index.html) allows binding character actions directly to inputs
+- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) allows binding character actions directly to inputs
 - [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html) used to provide a character action that waits for a timeline to finish
 - [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) used in a helper that performs camera locking using two virtual cameras
 
+__AdventureManual__
+- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for the inputs
+- [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html) for the materials
+
 __AdventureSouls__
-- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.3/manual/index.html) for all the player inputs
+- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for all the player inputs
 - [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html) for the intro and bonfire actions
 - [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) for the main camera
 - [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html)
@@ -70,7 +78,7 @@ All GitHub repositories related to my unity assets can be found in the [Softleit
 
 ## Roadmap
 
-There will be one more update that focuses on rounding out and polishing the current core functionality and the souls demo. After that I will most likely start on a second demo game(OoT?, 2d?). Feel free to let me know if you have some features or game types that you'd like to see in the future.
+There will be one more smaller update that focuses on polishing the current core functionality and the souls demo. While working on that I will be planning out the second demo which I hope to get started in the following update. Feel free to let me know if you have some features or game types that you'd like to see in the future.
 
 ## Feedback
 

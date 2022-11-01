@@ -13,6 +13,10 @@ manual:
     children:
       - title: "Release Notes"
         url: /manual/releases
+  - title: "How To"
+    children:
+      - title: "Getting Started"
+        url: /howto/gettingstarted
   - title: "Systems"
     children:
       - title: "Character"

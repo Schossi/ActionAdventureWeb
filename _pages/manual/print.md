@@ -27,6 +27,8 @@ sidebar:
 
 - [Overview](#overview)
   - [Release Notes](#release-notes)  
+- How To  
+  - [Getting Started](#getting-started)
 - Systems  
   - [Character](#character)
   - [Acting](#acting)
@@ -50,6 +52,11 @@ sidebar:
 
 # Release Notes  
 {% include_relative releases.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Getting Started  
+{% include_relative howto/gettingStarted.md %}  
 
 <div style="page-break-after: always;"></div>  
 

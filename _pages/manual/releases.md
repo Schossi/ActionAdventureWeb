@@ -6,8 +6,20 @@ sidebar:
   nav: manual
 ---
 
-## 1.1.2
-Some minor changes, loosely related to the new Kinematic Character Controller integration example which is now live on [GitHub](https://github.com/Schossi/AAK_KinematicCharacterController)!  
+## 1.2.0
+
+This update continues building out the souls demo while polishing up the core framework. It also adds a getting started tutorial project that should provide a smoother experience at the beginning. There is also a new integration available on [GitHub](https://github.com/Schossi/AAK_KinematicCharacterController) for the Kinematic Character Controller asset!  
+
+### ADDED
+
+- Step by step getting started tutorial
+- Pebble usable item in souls which can be thrown
+- Two handing weapons in souls
+  - stances for two handed melee and bows
+  - assignable actions for all 4 shoulder buttons
+- Bow and Arrow in souls
+  - damage is summed between bow and arrow
+  - easily customizable arrows
 
 ### FIXED
 

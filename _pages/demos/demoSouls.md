@@ -16,6 +16,7 @@ sidebar:
 |LockOn   |M3       |RStickPress|
 |LockLR   |R/T      |RStick     |
 |Interact |E        |A          |
+|TwoHand  |Hold E   |Hold Y     |
 |Use Item |Q        |X          |
 |Switch It|F        |DPadDown   |
 |RLight   |M1       |RB         |
