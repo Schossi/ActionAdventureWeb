@@ -8,9 +8,13 @@ sidebar:
 
 ## Core
 
+The [getting started]({% link _pages/manual/howto/gettingStarted.md %}) tutorial shows how an inventory can be added to a character and how to create item pickups. An example of usable and equippable items and slot can be found in .../AdventureManual/Systems/Item/ManualItem.unity.
+
 ### Item
 
-Items are a type of ScriptableObject that defines whether an item can be equipped or used and how it acts when it is. Derive from ItemBase and override the appropriate methods to do so and declare fields for relevant for items of that type(for example visuals). For items that do not have any behavior of their own(key items, currency) the GenericItem can be used. ItemBase also defines some basic common properties that most item systems will use like name, image and categories.
+Items are a type of ScriptableObject that defines whether an item can be equipped or used and how it acts when it is. Derive from ItemBase and override the appropriate methods to do so and declare fields for relevant for items of that type(for example visuals). For items that do not have any behavior of their own(key items, currency) the __GenericItem__ can be used. ItemBase also defines some basic common properties that most item systems will use like name, image and categories.
+
+The __EquipmentItem__ acts as a attribute- and stat modifier while it is equipped and whether is can be equipped is also determined by the attributes and stats of the character. The __UsableItem__ can add Attributes, Resources and Effects to the character when used. Both of them derive from __PrefabItem__ which can define a prefab that is instantiated when equipped to a __InstantiatingItemSlot__.
 
 ### Inventory
 
