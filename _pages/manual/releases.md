@@ -6,6 +6,24 @@ sidebar:
   nav: manual
 ---
 
+## 1.3.0
+
+### ADDED
+
+- Visual Scripting Support
+  - custom visual scripting units for all core systems 
+  - visual scripting version of the getting started scene
+  - enemy behavior examples
+    - simple examples based on getting started
+    - advanced enemies for souls demo(archer, attacker)
+- Loot in Souls Demo
+  - random state is persisted
+  - define items and chances
+  - loot drop is persisted until pickup 
+- Item Manual Example Scene
+  - equipment that is visible on the character
+  - usables that add health and vitality
+
 ## 1.2.0
 
 This update continues building out the souls demo while polishing up the core framework. It also adds a getting started tutorial project that should provide a smoother experience at the beginning. There is also a new integration available on [GitHub](https://github.com/Schossi/AAK_KinematicCharacterController) for the Kinematic Character Controller asset!  
