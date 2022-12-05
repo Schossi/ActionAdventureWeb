@@ -16,9 +16,11 @@ AAK was made to provide a solid foundation for these common ideas within the gen
 
 Since AAK goes for a broad base of functionality rather than something more specialized it generally tries to do anything in the most default, unity-built-in way possible. For example the movement in the souls demo uses the default unity character controller and the intro is done using timeline. To accommodate for the fact that more special systems may be required for movement, inventory, actions, ... AAK was made from the ground up with expandability in mind.
 
-## Project Structure
+## Setup
 
-AAK is separated into multiple projects.
+AAK is separated into multiple projects. If you are using AAK for the first time I recommend importing everything, including settings, into a new project.  
+
+If the project you are importing into uses the old input system the editor will prompt you to restart and you will have to start the import again after that.
 
 ### AdventureCore
 
@@ -26,7 +28,9 @@ The Core Framework of AAK, always import this one.
 
 ### AdventureManual
 
-Contains the [getting started]({% link _pages/manual/howto/gettingStarted.md %}) project. Recommended to learn about the various systems of AAK in a minimal environment before jumping into the more complex souls demo.  
+Contains the [getting started]({% link _pages/manual/howto/gettingStarted.md %}) project. Recommended to learn about the various systems of AAK in a minimal environment before jumping into the more complex souls demo.
+
+Also contains some Visual Scripting examples. Be sure to read the [visual scripting]({% link _pages/manual/howto/visualScripting.md %}) manual page before jumping into any scenes using Visual Scripting as there is some additional setup required!
 
 ### AdventureSouls
 
@@ -48,10 +52,12 @@ __AdventureCore__
 - [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) allows binding character actions directly to inputs
 - [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html) used to provide a character action that waits for a timeline to finish
 - [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) used in a helper that performs camera locking using two virtual cameras
+- [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) for the custom visual scripting units
 
 __AdventureManual__
 - [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for the inputs
 - [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html) for the materials
+- [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) used in visual scripting manual
 
 __AdventureSouls__
 - [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for all the player inputs
@@ -59,6 +65,7 @@ __AdventureSouls__
 - [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) for the main camera
 - [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html)
 - [ProBuilder](https://docs.unity3d.com/Packages/com.unity.probuilder@5.0/manual/index.html) used to build the environments
+- [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) for some optional custom enemy behaviors
 
 ## Manual
 
@@ -78,7 +85,7 @@ All GitHub repositories related to my unity assets can be found in the [Softleit
 
 ## Roadmap
 
-There will be one more smaller update that focuses on polishing the current core functionality and the souls demo. While working on that I will be planning out the second demo which I hope to get started in the following update. Feel free to let me know if you have some features or game types that you'd like to see in the future.
+The next focus of development will be the second demo project. This may take a while so I may add some smaller updates, integrations or fixes in the meantime. Feel free to let me know if you have some features or game types that you'd like to see in the future.
 
 ## Feedback
 

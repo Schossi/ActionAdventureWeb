@@ -17,6 +17,8 @@ manual:
     children:
       - title: "Getting Started"
         url: /howto/gettingstarted
+      - title: "Visual Scripting"
+        url: /howto/visualscripting
   - title: "Systems"
     children:
       - title: "Character"

@@ -29,6 +29,7 @@ sidebar:
   - [Release Notes](#release-notes)  
 - How To  
   - [Getting Started](#getting-started)
+  - [Visual Scripting](#visual-scripting)
 - Systems  
   - [Character](#character)
   - [Acting](#acting)
@@ -57,6 +58,11 @@ sidebar:
 
 # Getting Started  
 {% include_relative howto/gettingStarted.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Visual Scripting  
+{% include_relative howto/visualScripting.md %}  
 
 <div style="page-break-after: always;"></div>  
 
