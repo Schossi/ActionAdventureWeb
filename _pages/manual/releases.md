@@ -6,6 +6,15 @@ sidebar:
   nav: manual
 ---
 
+## 1.3.1
+
+### ADDED
+
+- Simple Third Person Prefab (AdventureManual/Prefabs/AAKThirdPerson)
+  - Basic CameraController for Third Person
+- Resource System Manual Scene (AdventureManual/Systems/Resource/ManualResource)
+  - Resource Bars for uGUI
+
 ## 1.3.0
 
 ### ADDED

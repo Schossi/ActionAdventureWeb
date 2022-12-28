@@ -8,6 +8,8 @@ sidebar:
 
 ## Core
 
+The [getting started]({% link _pages/manual/howto/gettingStarted.md %}) tutorial shows how resources can be added to a character and how to create damaging trigger areas. An example of different resource types and bars can be found in .../AdventureManual/Systems/Resource/ManualResource.unity.
+
 Resources are floating point metrics that can change on a frame to frame basis. A resource has a resource type which is mostly used to identify it and a ResourceValue behavior which actually holds and changes the value. The default ResourceValue does not change on its own. For more specialized resource values that change their value over time or by some other means you can inherit from ResourceValue(look at ChangingResourceValue for an example)
 
 Resources are managed by a ResourcePool which can be used to check, change and monitor resource values.  
