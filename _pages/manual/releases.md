@@ -6,6 +6,44 @@ sidebar:
   nav: manual
 ---
 
+## 1.4.0
+
+first in a series of 2-3 updates that focus on the second demo titled 'Hero'  
+it is experimental for now and subject to major changes in the future
+
+### ADDED
+
+- AdventureHero Demo [Experimental]  
+movement, attacking, lock on, item pickup and various other systems are already working
+you can check out the current state of the demo in the HeroDebuggingGeneral scene
+- AdventureCore.Tests Project  
+contains test scenes for various features(lock on, timeline textbox)
+- Timeline TextBox  
+can be used to display text using a timeline and pause it until confirmation  
+examples can be found in AdventureHero and the AdventureCore.Tests Project
+- Timeline Instructions
+applies Character Instructions from a timeline track
+used in AdventureHero to suspend character movement while showing pickups
+- Additional Visual Scripting Nodes for Lock On, Acting, VectorDirection, ...
+
+### IMPROVED
+
+- Additional sounds in Souls Demo for Bow, Pebble, ....
+- Particles Effect for healing in Souls Demo
+- added PropelCharacterLocal which is useful for motions like jumping
+- horizontal velocity in CharacterControllerMovement improved
+- LockOnManager now also manages and exposes the candidate lock on point 
+- LockOnManager now checks the entire ray between camera and potential points  
+this means models with lock on points can't be on the default layer  
+therefore target dummies in souls are now on the new neutral layer
+
+### FIXED
+
+- Sprinting not working in Souls demo until button released again
+- Bonfires did not suspend movement correctly 
+- Projectiles not being destroyed in Souls Demo
+- E Key not working in Souls Demo Title
+
 ## 1.3.1
 
 ### ADDED

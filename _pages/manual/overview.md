@@ -26,6 +26,14 @@ If the project you are importing into uses the old input system the editor will 
 
 The Core Framework of AAK, always import this one.  
 
+### AdventureCore.Tests
+
+Contains test scenes for various features, can be useful to try out those features in isolation. Import while exploring AAK but should not be included in production.
+
+### AdventureHero
+
+Home of the second demo which is currently being developed. It is currently in an Experimental stage meaning that it is subject to major changes in the future and not well documented for now.
+
 ### AdventureManual
 
 Contains the [getting started]({% link _pages/manual/howto/gettingStarted.md %}) project. Recommended to learn about the various systems of AAK in a minimal environment before jumping into the more complex souls demo.
@@ -85,7 +93,7 @@ All GitHub repositories related to my unity assets can be found in the [Softleit
 
 ## Roadmap
 
-The next focus of development will be the second demo project. This may take a while so I may add some smaller updates, integrations or fixes in the meantime. Feel free to let me know if you have some features or game types that you'd like to see in the future.
+The next couple of updates will focus on bringing the second demo from its current experimental state up to a fully functioning and documented demo.
 
 ## Feedback
 
