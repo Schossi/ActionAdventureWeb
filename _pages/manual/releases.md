@@ -6,6 +6,60 @@ sidebar:
   nav: manual
 ---
 
+## 1.4.1
+
+second update focused on the new 'Hero' demo
+
+### ADDED
+
+- HeroDemo
+  - Title Screen, Scene Transition and Death Action
+  - First Person View
+  - Gear and Equipment Menus, Health and Damage in HUD
+  - Stunning Nut and exploding Bomb Equipment Items
+  - Pouches that expand carrying capacity for Money, Nuts, Bombs
+  - Carrying Blocks, Pots and Bombs
+  - Heart, HeartContainer, HeartPiece, Coin, Nut and Bomb Pickups
+  - ...and much more, check out the HeroDebuggingGeneral and HeroTitle scenes!
+- InputBindingText  
+displays current input binding in UI texts(Legacy, TMPro, UIToolkit)  
+useful for texts like 'Press {Confirm} to continue!'
+- StateManager  
+simple state manager that acts through unity events  
+used in Hero for game and HUD state
+- Simple UI Dialog Windows(OkCancel, YesNo, ... decisions)  
+usable from code and new custom visual scripting nodes  
+used in hero demo for name input and delete save game check
+- Marching in MovementBase    
+makes a character walk to or toward some target  
+timeline track included so marching can be used in cutscenes
+used in Hero when entering and exiting scenes
+
+### IMPROVED
+
+- More Custom Visual Scripting Units  
+Hero uses visual scripting for a large part of its logic(see AdventureHero/Graphs)
+- More Custom Editors  
+many of the core components now have custom editors for improved debugging  
+trigger areas show their current items, actions can be started, items added, ...
+- Save Data Window for PlayerPrefSaver  
+see Window/ActionAdventure/SaveData or 'Edit Save Data' on the PersistenceContainer
+- TMPro Support  
+Hero uses TMPro, Souls is still UIToolkit
+- Actions can be started by name if they are children of the main actor
+- CharacterControllerMovement can now apply weight(WeightPower field in Inspector)
+
+### CHANGED
+
+- visual scripting now uses ICharacterAssociator instead of directly referring to characters  
+ICharacterAssociator implemented by components that are directly owned by characters  
+this allows units on actions to easily use the executing character
+- damage direction is stored in DamageEvent  
+damage direction should be assigned to DamageEvent.Vector during IDamageSender.OnDamage    
+TriggerDamageSender now has additional direction options(Up, SenderToReceiver, ...)
+- force of damage and ragdolls is applied as ForceMode.Impulse
+- neutral layer tweaked to be more consistent with Player and Enemy
+
 ## 1.4.0
 
 first in a series of 2-3 updates that focus on the second demo titled 'Hero'  
