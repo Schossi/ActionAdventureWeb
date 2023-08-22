@@ -59,6 +59,7 @@ damage direction should be assigned to DamageEvent.Vector during IDamageSender.O
 TriggerDamageSender now has additional direction options(Up, SenderToReceiver, ...)
 - force of damage and ragdolls is applied as ForceMode.Impulse
 - neutral layer tweaked to be more consistent with Player and Enemy
+- minimum recommended unity version increased to 2021.3.29
 
 ## 1.4.0
 
