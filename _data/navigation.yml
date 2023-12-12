@@ -1,10 +1,12 @@
 main:
   - title: "Demo"
-    url: /demos/souls
+    url: /demos/hero
   - title: "Manual"
     url: /manual
     
 demos:
+  - title: "Hero"
+    url: /demos/hero
   - title: "Souls"
     url: /demos/souls
 manual:
