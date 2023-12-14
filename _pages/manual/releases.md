@@ -57,6 +57,11 @@ disables the action when the character is not grounded
 resets the player camera to the main camera
 - LockableCameraBase can also lock the cursor in Build
 
+### CHANGED
+
+- CharacterControllerMovement now uses Physics.SyncTransforms() when teleporting  
+disabling the collider prevented some trigger messages from occuring
+
 ## 1.4.1
 
 second update focused on the new 'Hero' demo
