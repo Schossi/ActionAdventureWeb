@@ -6,6 +6,57 @@ sidebar:
   nav: manual
 ---
 
+## 1.5.0
+
+official release of the 'Hero' demo
+
+### ADDED
+
+- HeroDemo
+  - Beach, Inland, Canyon and Temple levels
+  - Wall Climbing
+  - Block Pushing
+  - Slingshot Gear Item
+  - Skeleton Enemy
+  - Various Passage(Door) Prefabs  
+  Scene Exit, Locked, Barred, Arena, ...
+  - Sword and Shield Items
+  - Destructible Vines, Walls, Bushes
+  - Random Loot Selection for Pots
+  - Readable Signs
+  - ...
+- Visual Scripting Units
+  - PlayAnimation
+  - Ragdoll
+  - VisualScriptingAction Bool/Int/Vector Received
+  - Activate/Deactivate Damage
+  - DamagedTriggerTotal/DamagedCharacterTotal
+  - EffectAdded/Removed
+  - Set/Reset/Override ManagerState
+  - Manager State Changed/Entered/...
+  - HasItem
+  - SetDialogResult
+  - AlignToPosition
+  - ResetInput/Momentum
+- TimedAction  
+simple action that ends after a set duration
+- GenericDamage damage type  
+does nothing on its own, handling in Receivers
+
+### IMPROVED
+
+- TriggerArea handles overlapping colliders better
+- TriggerDamageSender setting SendOnce  
+only sending damage the first time a receiver is added per activation  
+can be useful to avoid double damage from things like sword slashes
+- MotionAction setting OnlyGrounded  
+disables the action when the character is not grounded
+- Gravity for ProjectileDamageSender
+- ResetMomentum in MovementBase
+- ResetMain in LockableCameraBase  
+resets the player camera to the main camera
+- LockableCameraBase can also lock the cursor in Build
+
 ## 1.4.1
 
 second update focused on the new 'Hero' demo
