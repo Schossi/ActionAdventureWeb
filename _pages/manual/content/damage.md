@@ -13,28 +13,38 @@ sidebar:
 
 Damage in AAK is a multi stage process that lets a sender, receiver and kind of damage interact. In __PreDamage__ the sender and receiver are informed that a damage is about to occur between them, they both have the chance to completely cancel the damage here. During __OnDamage__ each kind of damage that the sender has is packaged into a damage event that gets send to all the participants. This is where a senders and receivers can modify the damage value and where the DamageKind applies whatever effect the damage has. Finally in __PostDamage__ the sender and receiver have a chance to react to the combined changes of the applied damages.  
 
-An IDamageSender is any component that causes damage occurences. It can be implemented by any class that sends damage. You can Use the static DamageEvent.Send to send your damages. AAK comes with a __TriggerDamageSender__ that uses that regular Unity trigger messages(OnTriggerEnter, ...). By default it only sends damage when a __TriggerDamageRecevier__ first enters but it can also be configured to send damage in intervals or at the end.  
+An IDamageSender is any component that causes damage occurences. It can be implemented by any class that sends damage. You can Use the static DamageEvent.Send to send your damages. AAK comes with a __TriggerDamageSender__ that uses that regular Unity trigger messages(OnTriggerEnter, ...). By default it only sends damage when a __TriggerDamageReceiver__ first enters but it can also be configured to send damage in intervals or at the end.  
 
 AAK also comes with the DestructibleDamageReceiver which destroys(or replaces) its gameobject when it gets damaged. This is ideal for destructible environment object or any other object that needs to get damages but does not warrant a full character.  
 
 Both the __TriggerDamageSender__ and the __TriggerDamageReceiver__ forward all their damage calls to the character they are attached to(if any). Therefore if we want to react to any kind of damage done to a character we can conveniently do that in the character implementation. The __SuspendSendDamage__ and __SuspendReceiveDamage__ character instructions hook in here.  
 
-Damages can theoreticalls be anything, what exactly a damage does is decided by the __DamageKind__ implementation. The most common kind of damage is removing a resource(HP) from a characters ResourcePool. AAK comes with the __ResourceDamage__ damage kind which does exactly this.(ContextMenu>Aventure/ResourceDamage)
+Damages can theoretically be anything, what exactly a damage does is decided by the __DamageKind__ implementation. The most common kind of damage is removing a resource(HP) from a characters ResourcePool. AAK comes with the __ResourceDamage__ damage kind which does exactly this.(ContextMenu>Adventure/ResourceDamage)
 
 ## Souls
 
 Somewhat more complicated than a lot of other games damage in the souls demo is split into physical and poise damage. Poise damage is generally used to signify the brunt of an attack rather then the pure health malus.  
 
-The base character defines a lot of the damage handling in the demo. Parries are checked in __PreDamageReceive__ so that the damage can be cancelled if a parry succeeds. In __OnDamageReceive__ the damage value is reduced by defense or set to 0 when a character is guarding. In __PostDamageReceive__ it checks if the charcter dies or is staggered as a result of the damages applied.  
+The base character defines a lot of the damage handling in the demo. Parries are checked in __PreDamageReceive__ so that the damage can be cancelled if a parry succeeds. In __OnDamageReceive__ the damage value is reduced by defense or set to 0 when a character is guarding. In __PostDamageReceive__ it checks if the character dies or is staggered as a result of the damages applied.  
 
 One thing we need to make sure is that a player does not damage itself. We could theoretically just cancel any damage that a player weapon might do to the player in PreDamage but using Layers is far more convenient and performant.  
 
-The AdventureSouls demo has various Layers that control which objects can interact with each other. Check the Pyhsics settings to see how exactly they are configured.  
+The AdventureSouls demo has various Layers that control which objects can interact with each other. Check the Physics settings to see how exactly they are configured.  
 
 <p align="center">
   <img src="/assets/images/Layers.png" />
 </p>
 
-The player has a general Player Layer that is used for any kind of logical interaction like entering areas or object interactions. The PlayerBody Layer is used to receive damage and interact with physics objects like derstroyed crates. In the current demo the body, just like the logic, uses a simple capsule collider. To get more exact hitboxes and more interesting phyiscs interactions the PlayerBody is the one that should be changed to have more detail. Lastly PlayerDamage is used on any weapons the player uses and interascts mostly with EnemyBody.  
+The player has a general Player Layer that is used for any kind of logical interaction like entering areas or object interactions. The PlayerBody Layer is used to receive damage and interact with physics objects like destroyed crates. In the current demo the body, just like the logic, uses a simple capsule collider. To get more exact hitboxes and more interesting physics interactions the PlayerBody is the one that should be changed to have more detail. Lastly PlayerDamage is used on any weapons the player uses and interacts mostly with EnemyBody.  
 
 The Enemy has a very similar setup to the player with the Enemy, EnemyBody and EnemyDamage Layers. There is also a NeutralDamage Layer that is used by traps so they can send damage to either character. The Trigger Layer is used for logical area to make sure these do not interact with damages or physics at all.
+
+## Hero
+
+Damage in Hero fairly straightforward. The __HeroHealthDamage__ is used by player and enemy attacks as well as environment hazards like the boulder to reduce the health resource of the characters.  
+
+The Layer is also not split within the character, the entire player including the sword and its damage is on the Player layer. In the same way the skeleton lies on the enemy layer.
+
+__HeroStunDamage__ is a special kind of damage caused by the __HeroNut__ throwable that can stun enemies. It does so by raising the __HeroStun__ resource which ultimately adds the __HeroStunEffect__ to the character.
+
+The __HeroBombDamage__ does nothing on its but is used as a damage filter on the __HeroCrackedWall__ so that the __DestructibleDamageReceiver__ can only be affected by bombs.

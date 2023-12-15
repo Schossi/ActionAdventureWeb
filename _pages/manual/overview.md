@@ -32,7 +32,13 @@ Contains test scenes for various features, can be useful to try out those featur
 
 ### AdventureHero
 
-Home of the second demo which is currently being developed. It is currently in an Experimental stage meaning that it is subject to major changes in the future and not well documented for now.
+Contains the [hero]({% link _pages/demos/demoHero.md %}) demo, import if you want to start by adapting this demo.  
+
+Start up Scenes/HeroTitle to __start the game from the title screen__ just like the demo does.  
+
+__IMPORTANT__, before playing the 'SaveSlot' app variable has to be added in visual scripting. Select the Logic Object in the Hierarchy and click 'Edit Graph' which opens the visual scripting graph. In the 'App' tab on the bottom left add a variable called 'SaveSlot' of type Integer with a default value of -1. This is needed to carry over the save slot between scenes.  
+
+Scenes/Debugging/HeroDebuggingGeneral is a __useful scene for testing__, some more specialized scenes can be found in the same folder  
 
 ### AdventureManual
 
@@ -46,13 +52,15 @@ Contains the [soulslike]({% link _pages/demos/demoSouls.md %}) demo, import if y
 
 Start up Scenes/Title/SoulsTitle to __start the game from the title screen__ just like the demo does.  
 
+__IMPORTANT__ whenever starting the souls demo from the editor you need to click into the window to lock the cursor before some input is accepted. This is done to avoid performing actions on accident from outside.
+
 To __jump directly into the game__ open Scenes/Dungeon/SoulsDungeon for the level itself, add Scenes/Dungeon/SoulsDungeonTemp for the temporary parts like enemies and crates.  
 
 Scenes/Debugging/SoulsDebuggingGeneral is a __useful scene for testing__ out all the actions and Scenes/Debugging/Enemies/SoulsDebuggingEnemies can be used to debug combat.  
 
 Scenes/Debugging/Interaction/SoulsDebuggingInteraction can be useful to __synchronize the character with some object they are interacting with__, this is done using timelines. 
 
-The models in this demo were made using blender and then exported to fbx for unity. You can find the original blend files and the used export settings in AdventureSouls/AdventureSoulsBlender.zip.
+The models for the demos were made using blender and then exported to fbx for unity. You can find the original blend files and the used export settings in AdventureModels.zip.
 
 ### Dependencies
 
@@ -66,6 +74,15 @@ __AdventureManual__
 - [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for the inputs
 - [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html) for the materials
 - [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) used in visual scripting manual
+
+__AdventureHero__
+- [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for all the player inputs
+- [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.6/manual/index.html) for the intros, scene transitions, chest action
+- [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html) for the main camera
+- [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html)
+- [ProBuilder](https://docs.unity3d.com/Packages/com.unity.probuilder@5.0/manual/index.html) used to build the levels
+- [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) enemy behaviour, character actions, scene transitions, loot, idle animations
+- [TextMesh Pro](https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/manual/index.html) for the UI texts
 
 __AdventureSouls__
 - [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.4/manual/index.html) for all the player inputs
@@ -93,7 +110,7 @@ All GitHub repositories related to my unity assets can be found in the [Softleit
 
 ## Roadmap
 
-The next couple of updates will focus on bringing the second demo from its current experimental state up to a fully functioning and documented demo.
+The next update will continue to polish and build out the Hero Demo and its Documentation.
 
 ## Feedback
 

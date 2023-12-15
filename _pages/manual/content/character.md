@@ -21,7 +21,7 @@ CharacterBase has explicit fields for AttributePool and ResourcePool since these
 
 A CharacterInstruction defines some type of state change for a character in a way that can be set and reset. This is done to deal with situation where multiple systems modify the same properties without knowing about each other. For example modifications to the movement speed or the visibility of an item slot. AdventureCore defines some useful general instructions like multipliers for attributes or stats and suspending damages, collisions or movement. See the header of the different instructions for a more detailed explanation of each one.  
 
-CharacterInstruction(or CharacterInstruction[]) can be used as an inspector field despite being abstract because AdventureCore comes with a PropertyDrawer that allows choosing the actual implementation in the inspector.
+CharacterInstruction(or CharacterInstruction[]) can be used as an inspector field despite being abstract because AdventureCore comes with a PropertyDrawer that allows choosing the actual implementation in the inspector.  
 
 ## Souls
 
@@ -31,3 +31,11 @@ CharacterInstruction(or CharacterInstruction[]) can be used as an inspector fiel
   - __SoulsNonPlayerCharacter__ base that provides some default behavior for simple NPC characters
     - __SoulsEnemyCharacter__ attacks when something enters its trigger area
     - __SoulsFriendCharacter__ has some additional objects(talk, trade) when idle and only attacks when damaged
+
+## Hero
+
+Most of the player logic is done through the __HeroCharacter__ scripting graph. This includes things like Animation Parameters, Context Actions Selection, Damage and Death Handling. The graph subscribes to the main StateManager on the HeroSetup object to switch between its Play and Paused states.  
+
+The __HeroPlayerCharacter__ class provides the sheathing behavior and keeps track of important transforms like ItemLeft or Sword. These are exposed to visual scripting in HeroSheathingUnit and HeroInfoUnit. It also manages presentation of newly found items and passing on confirmations to text boxes.  
+
+The __HeroSkeleton__ character uses the __GenericCharacter__ class from AdventureCore, its entire logic is driven by the HeroSkeleton visual scripting graph.  

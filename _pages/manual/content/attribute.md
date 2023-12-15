@@ -27,3 +27,7 @@ __SoulsLevel__ and __SoulsExperience__ are counters that are used to check if th
 Lastly __SoulsFlask__ defines how many flasks are restored to the player when they sit at a bonfire. There is no way to change it currently but it has been added so increasing it with a pickup or some other action can be implemented later.
 
 The stats __SoulsPhysicalDefense__ and __SoulsPoiseMaximum__ are not influenced by any attribute, they just have some base value and are only increased by modifiers like armor.  
+
+## Hero
+
+AdventureHero only defines a single Attribute called __HeroHearts__. It is used in the __HeroHeartsMaximum__ stat to define the maximum health in the AttributePool of the player character. The Attribute starts at 3 and gets raised by collecting __HeroHeartEssence__.

@@ -32,3 +32,11 @@ As mentioned above the container does not save to disk itself, instead it refere
 State in AdventureSouls is split into a couple different areas. __SoulsSystemPersistence__ is a global area independent of the save slot that is used for settings like the sound effects volume but also to save a short info structure for every save index that is displayed in the title screen. __SoulsPlayerPersistence__ is just used by the player character, the player gets its own area because it is saved quite frequently. The __SoulsPermanentPersistence__ is used to save permanent world state like collected items or pulled levers. Lastly __SoulsTemporaryPersistence__ is where any state resides that is discarded whenever the player changes the level or sits at a bonfire. It contains the state of the enemies and destructible environment objects.  
 
 The __PersistenceContainer__ is part of the SoulsSetup prefab which contains all the necessary setup to run the game. Basically if you create a new scene and add the setup as well as a plane for the player to stand on you can start the game and it'll work. If you check the container on the setups in the debugging scenes like Scenes/Debugging/SoulsDebuggingGeneral you may notice some overrides. For one the key is overridden so that data saved for that debug scene does not override data from the actual game scenes. Also the saver has been removed for most of them, this completely disables persistence because for most debug scenes a complete reset is more useful. If you want to debug the persistence logic you have to reassign or revert that saver. 
+
+## Hero
+
+Persistence in the hero demo is a bit more straightforward than in souls. There is only one __PersistenceArea__ called __HeroGamePersistence__ which saves all the data per save slot.  
+
+Movement is not persisted, the current scene is set in the 'Scene' variable and the desired entry is saved in 'Parameter'. The game is saved automatically in scene transitions(HeroExit) which also write the current scene or when the game is ended from the menu. When the game is loaded the scene set in the variable is opened.  
+
+Whether, for example a heart shard has been picked up or a cracked wall bombed is persisted using a __DestructionPersister__.

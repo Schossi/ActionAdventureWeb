@@ -41,3 +41,25 @@ When armor is equipped it can also modify some stats, adding the modifier is don
 In addition to the slot-item combination that armor uses, a weapon also has a SoulsWeapon behavior which serves as the access point for a weapons actions and damages in the weapons prefab. It can be used to check the damage through the prefab when the item is stored in the inventory and for the actions when it has been instanced by the slot.  
 
 The SoulsWeaponSlot allows binding input to its weapons light and heavy actions. It then rebinds these whenever the equipped weapon changes.
+
+## Hero
+
+All the items in the hero demo have a visual prefab which is used when the hero presents the item when it is first picked up.
+
+### Gear
+
+Sword and Shield are simple __PrefabItem__ from AdventureCore. They are instantiated on the respective __InstantiatingItemSlot__ when equipped. Their actual functionality in defined in the attack and guard actions which themselves check that an item is equipped.  
+
+The hero demo also has various items that expand the inventory. For example the HeroBombPouch that lets the character carry more bombs. These did not make it into the levels yet but can be tried out in the HeroDebuggingGeneral scene(chests).
+
+### Equipment
+
+Equipment items hold an action prefab and can be assigned to on of three equipment slots to use them. When the __HeroEquipmentItem__ is equipped to a __HeroEquipmentSlot__ its action prefab is instantiated and when the slot is used that action gets started. When an item is used directly from the inventory it gets equipped to a hidden EquipmentX slot.
+
+### Usable
+
+__HeroHeart__ is a __UsableItem__ which restores one __HeroHealth__ resource.  
+
+The __HeroHeartTriple__ is a placeholder for three __HeroHeart__ items. Therefore it is presented as a seperate item but when added to the inventory three hearts are added instead.
+
+__HeroHeartEssence__ adds one __HeroHearts__ attribute which expands the characters health pool. __HeroHeartShard__ is placeholder for the essence but has a prerequisite count of four before it is replaced. 

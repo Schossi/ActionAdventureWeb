@@ -57,3 +57,39 @@ __CanEnd__ is true when RELEASE has been received by __OnMessage__ so we can tra
 The gate in AdventureSouls uses an action from AdventureCore called ObjectAction. This is a good action for interacting with objects in the world. It supports one animation on an object you're interacting with and another(optional) one on an object that should move in the end. It is useful for doors, levers and chests.
 
 An ObjectAction __CanStart__ always unless there is a cost item defined the character does not have. __OnStart__ it moves the character into place and triggers its animation. When ACT is received in __OnMessage__ it starts the animation on the lever and in __OnEnd__ it starts the one on the gate.
+
+## Hero
+
+### Attacks
+
+The different directional Attacks of the Hero use a __VisualScriptingAction__ combined with the __HeroAttackAction__ scripting graph. The kind of attack each action performs is determined by the AttackType integer variable on the object. This integer gets sent to the animator in the graph which triggers the attack animation. During the animation the graph reacts to messages defined in the animation like DMG_ON which activates the damage sender on the sword.  
+
+Which of the attacks is started is decided in the Actions Subgraph of the HeroCharacter. This graph checks if the hero actually has a sword equipped and then selects an action based on the input direction.
+
+### Throw
+
+Throwing is another __VisualScriptingAction__ that shows a visual(HeroNutVisual) in the characters hand while it winds up and that instantiates a projectile(HeroNutProjectile). It is started from an equipment item(HeroNut) and uses the __HeroThrow__ graph.  
+
+In the actual levels this item only randomly drops from pots. To try it out imediately open the __HeroDebuggingGeneral__ scene, the inventory of the player is overridden to have it equipped. 
+
+### Carry
+
+The __HeroCarryAction__ is s custom action either started as a context action from the __CharacterActionArea__(Pots) or by an Equipment Item that uses the __HeroSpawnEquipment__ graph(Bombs). The HeroDebuggingGeneral scene contains some examples of pots, bombs and other objects that can be carried.  
+
+It parents itself to the ItemParentOverhead transform defined on the HeroPlayerCharacter when started and sets its rigidbody to IsKinematic=true. It sets the __CONTEXT_ACTION_OVERRIDE__ variable to receive the context action button while it is active. When it is ended by Throwing, Putting or some other action occuring it unparents itself again and sets isKinematic=false so it is affected by Physics again.
+
+### Climb
+
+In contrast to most other actions the custom __HeroClimbAction__ starts itself under the right circumstances. It uses a __GenericTriggerArea__ to detect climbable surfaces and checks whether the player input points against those.  
+
+During climbing it checks points in four directions to determine if the climb can continue, these points are visualized as blue spheres when the action is selected. When it cannot climb upwards is performs Raycasts forward and down to check if the character can pull itself up. These are visualized as green lines.  
+
+To define a surface as climbable simply add a GenericTriggerItem and set the Key to CLIMB. Check out the HeroDebuggingClimbing scene for examples of climbable surfaces.
+
+### Block
+
+The __HeroBlockAction__ lets characters pull and push on rigidbodies. It is defined on the respective side of the objects that needs to be pushed and gets started through the __CharacterActionArea__.
+
+The rigidbody needs to be set to isKinematic=true when not used so the character can't simple push it away by running against it. When pushed isKinematic is set to false to allow the object to fall when it is pushed over a ledge. The action then ends itself and waits for the rigidbody to stand still before it resets isKinematic.
+
+The HeroDebuggingBlock scene contains various examples on how block pushing may be used.

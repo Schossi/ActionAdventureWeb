@@ -21,3 +21,11 @@ __SoulsHealth__ is a simple ResourceValue that does no change on its own. It is 
 __SoulsEndurance__ is a custom behavior in AdventureSouls called SoulsStamina. This is similar to a ChangingResourceValue but also subtracts from its value when the player is sprinting.  
 
 __SoulsPoise__ is a resource value that defines whether the character gets staggered by a hit. It gets damaged by attacks and then refills on its own. 
+
+## Hero
+
+The player only has the __HeroHealth__ resource which gets reduced by __HeroHealthDamage__ and recovered by picking up __HeroHeart__ pickups.  
+
+The Damage subgraph in __HeroCharacter__ checks if the health has been reduced to zero and starts the Die __TimelineAction__ with the __HeroDeath__ timeline.
+
+In addition to health skeletons also have the __HeroStun__ resource. This __EffectResourceValue__ adds the __HeroStun__ effect to the character which stops movement and animations. The __HeroStunResource__ visual graph is in charge of visualizing the effect by tinting the model materials in a blue shade.
