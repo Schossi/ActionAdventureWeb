@@ -6,6 +6,24 @@ sidebar:
   nav: manual
 ---
 
+## 1.5.1
+
+small hotfix for some smaller issues in the new demo
+
+### ADDED 
+
+- SphereDamageSender that sends damages using a SphereOverlap  
+used for bombs so damage only gets sent at the moment of impact
+
+### FIXED
+
+- exception when using bomb from menu outside of debug scenes
+- jump attacks only sent damage in the debug scenes
+- locking on without a target would sometimes unlock itself
+- duplicate persistence keys for chests in temple
+- sling projectile now uses dynamic collision detection to avoid passing
+- minor adjustments to level geometries
+
 ## 1.5.0
 
 official release of the 'Hero' demo
