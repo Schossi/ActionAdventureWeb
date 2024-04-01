@@ -28,7 +28,7 @@ Hero demo audio and UI improvements
 
 ### IMPROVED
 
-- PlayerPrefSaver debug data by key
+- PlayerPrefSaver debug data by key, stays between scenes
 - CharacterActionArea setting SortByDistance 
 
 ## 1.5.1
