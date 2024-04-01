@@ -6,6 +6,31 @@ sidebar:
   nav: manual
 ---
 
+## 1.5.2
+
+Hero demo audio and UI improvements
+
+### ADDED
+
+- HeroDemo
+  - sound effects for most actions
+  - ambience sounds
+  - temple and combat music
+  - different steps by ground type
+  - sound sliders and quality dropdown
+  - improved sprites for buttons and items
+  - ...
+- AudioManager
+  - crossfading music tracks
+  - visual scripting units
+  - global manager accessibility
+- GroundChecker that checks for material and color
+
+### IMPROVED
+
+- PlayerPrefSaver debug data by key
+- CharacterActionArea setting SortByDistance 
+
 ## 1.5.1
 
 small hotfix for some smaller issues in the new demo
