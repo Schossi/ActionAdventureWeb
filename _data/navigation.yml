@@ -45,8 +45,18 @@ manual:
     children:
       - title: "Setup"
         url: /manual/hero-setup
-      - title: "Scenes"
-        url: /manual/hero-scenes
+      - title: "Title"
+        url: /manual/hero-title
+      - title: "Beach"
+        url: /manual/hero-beach
+      - title: "Inland"
+        url: /manual/hero-inland
+      - title: "Canyon"
+        url: /manual/hero-canyon
+      - title: "Temple"
+        url: /manual/hero-temple
+      - title: "Debug"
+        url: /manual/hero-debug
   - title: "Souls"
     children:
       - title: "Player"

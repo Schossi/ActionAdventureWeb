@@ -8,6 +8,10 @@ sidebar:
 
 The following is an overview of the HeroSetup prefab in the AdventureHero demo.
 
+<p align="center">
+  <img src="/assets/images/hero/heroSetup.png" />
+</p>
+
 - [HeroSetup](#herosetup)
   - [Camera](#camera)
   - [HeroCharacter](#herocharacter)
