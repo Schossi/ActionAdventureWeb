@@ -98,7 +98,7 @@ This manual is meant to explain the concepts and ideas of AAK rather then any sp
 
 The manual pages for the core systems of AAK are always split into a Core part that explains the idea behind the system and a Souls part that covers how the system was used in that demo.
 
-The Souls section of the manual contains some additional information about how the AdventureSouls demo is set up and how it may be extended.
+The Souls and Hero sections at the end of the manual contain some additional information about how the demo are set up and how they may be extended.
 
 ## Integrations
 

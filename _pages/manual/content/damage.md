@@ -47,4 +47,4 @@ The Layer is also not split within the character, the entire player including th
 
 __HeroStunDamage__ is a special kind of damage caused by the __HeroNut__ throwable that can stun enemies. It does so by raising the __HeroStun__ resource which ultimately adds the __HeroStunEffect__ to the character.
 
-The __HeroBombDamage__ does nothing on its but is used as a damage filter on the __HeroCrackedWall__ so that the __DestructibleDamageReceiver__ can only be affected by bombs.
+The __HeroBombDamage__ does nothing on its own but is used as a damage filter on the __HeroCrackedWall__ so that the __DestructibleDamageReceiver__ can only be affected by bombs.

@@ -1,5 +1,5 @@
 main:
-  - title: "Demo"
+  - title: "Demos"
     url: /demos/hero
   - title: "Manual"
     url: /manual
@@ -41,6 +41,12 @@ manual:
         url: /manual/persistence
       - title: "Damage"
         url: /manual/damage
+  - title: "Hero"
+    children:
+      - title: "Setup"
+        url: /manual/hero-setup
+      - title: "Scenes"
+        url: /manual/hero-scenes
   - title: "Souls"
     children:
       - title: "Player"

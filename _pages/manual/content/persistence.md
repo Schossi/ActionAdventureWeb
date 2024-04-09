@@ -35,8 +35,8 @@ The __PersistenceContainer__ is part of the SoulsSetup prefab which contains all
 
 ## Hero
 
-Persistence in the hero demo is a bit more straightforward than in souls. There is only one __PersistenceArea__ called __HeroGamePersistence__ which saves all the data per save slot.  
+Persistence in the hero demo is a bit more straightforward than in souls. There is only one __PersistenceArea__ for game data called __HeroGamePersistence__ which saves all the data per save slot. The second area called __HeroSettingsPersistence__ is only used for global settings like sound effects volume or visual quality.  
 
-Movement is not persisted, the current scene is set in the 'Scene' variable and the desired entry is saved in 'Parameter'. The game is saved automatically in scene transitions(HeroExit) which also write the current scene or when the game is ended from the menu. When the game is loaded the scene set in the variable is opened.  
+Movement is not persisted, the current scene is set in the 'Scene' variable and the desired entry point is saved in 'Parameter'. The game is saved automatically in scene transitions(HeroExit) which also write the current scene or when the game is ended from the menu. When the game is loaded the scene set in the variable is opened.  
 
 Whether, for example a heart shard has been picked up or a cracked wall bombed is persisted using a __DestructionPersister__.

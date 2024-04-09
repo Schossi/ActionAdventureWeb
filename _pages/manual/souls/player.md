@@ -87,14 +87,16 @@ The SoulsCriticalAction is the one performed by the player, it uses a GenericTri
 
 All the [actions]({% link _pages/manual/content/acting.md %}) a player can perform on its own as well as the actor are found here.
 
-- Sit is not really in use currently but serves as an example of a gesture that is performed until some other input arrives
-- Turn is started by the movement when the character makes a sharp turn
-- Roll is started by the SoulsPlayerCharacter when dodge is pressed and the input direction is not neutral, in the Starting/Ending events in the inspector you can see that it activates a damage while it is active.(the damage has value 0 so it destroys boxes but does not hurt enemies)
-- Dodge is started by the SoulsPlayerCharacter when dodge is pressed and the input direction is neutral
-- Jump is directly bound to the Act.Jump input by SoulsPlayerCharacter
+The specific Actor implementation used is the __BufferedCharacterActor__ which will queue up actions for a short period of time. So when roll is pressed while the character is still attacking the roll will still be performed after the attack has finished
+
+- __Sit__ is not really in use currently but serves as an example of a gesture that is performed until some other input arrives
+- __Turn__ is started by the movement when the character makes a sharp turn
+- __Roll__ is started by the SoulsPlayerCharacter when dodge is pressed and the input direction is not neutral, in the Starting/Ending events in the inspector you can see that it activates a damage while it is active.(the damage has value 0 so it destroys boxes but does not hurt enemies)
+- __Dodge__ is started by the SoulsPlayerCharacter when dodge is pressed and the input direction is neutral
+- __Jump__ is directly bound to the Act.Jump input by SoulsPlayerCharacter
 - Stagger is started by the SoulsCharacterBase base class that the player has in common with the enemies when the character runs out of poise from being hit
-- GuardBreak is started by the SoulsCharacterBase when a character guards and runs out of stamina or it is parried while attacking
-- Death is started by SoulsPlayerCharacter when it gets hit and health runs out, notice the SignalReceiver which calls the ResetDeath method
+- __GuardBreak__ is started by the SoulsCharacterBase when a character guards and runs out of stamina or it is parried while attacking
+- __Death__ is started by SoulsPlayerCharacter when it gets hit and health runs out, notice the SignalReceiver which calls the ResetDeath method
 
 ## Items
 
