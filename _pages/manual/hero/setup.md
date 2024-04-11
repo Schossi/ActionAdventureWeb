@@ -111,7 +111,7 @@ Contains [actions]({% link _pages/manual/content/acting.md %}) the player can pe
 
 The hero demo uses the __MinimalCharacterActor__ so the character can only perform one action at a time and no further action can be queued until the current one is done.
 
-- __Jump__ is a basic __MotionAction__ that propells the character when it is started
+- __Jump__ is a basic __MotionAction__ that propels the character when it is started
 - __Roll__ is also a __MotionAction__ but it locks rotation movement while active
 - The different Attack actions use __VisualScriptingAction__  
 open up the __HeroAttackAction__ graph to explore how it works, the messages it receives are sent by animation events found in the __HeroKid__ model
@@ -152,7 +152,7 @@ Contains a trigger collider and __LockOnManager__ which is a special kind of __T
 
 The __HeroTargetCandidate__ has a __Follower__ component that is triggered by actions configured in the managers inspector. It visualizes possible lock on points while nothing is locked on. It also contains an animator that is controlled by events on the follower. Another __Follower__ can be found on the __LockOnTarget__ in the __UI__ transform. This one is shown when a point is actually locked on.
 
-There is a seperate testing scene for the lock on system in AdventureCore.Tests called LockOnTest which can be used to test out the system in isolation.
+There is a separate testing scene for the lock on system in AdventureCore.Tests called LockOnTest which can be used to test out the system in isolation.
 
 #### Sound
 
@@ -170,7 +170,7 @@ Dialog used by the __VisualScriptingAction__ in the __HeroSign__ object. Has to 
 
 #### TextBox
 
-The __TextBoxTMP__ here is used to display newly aquired items as part of the Present __TimelineAction__. The one located in TextBoxFullscreen is used in the Die action. 
+The __TextBoxTMP__ here is used to display newly acquired items as part of the Present __TimelineAction__. The one located in TextBoxFullscreen is used in the Die action. 
 
 #### Menu
 
@@ -202,4 +202,4 @@ Money and Health are both stored as prefabs so they can be reused to display mon
 
 ### Gear
 
-This is where the player model that is shown in the gear screen is located. It uses its own camera and lighting which is seperated from the regular game by using the UI layer. The contents of the sword and shield slots from the actual player character are copied using __InstantiatingItemSlotClone__ scripts.
+This is where the player model that is shown in the gear screen is located. It uses its own camera and lighting which is separated from the regular game by using the UI layer. The contents of the sword and shield slots from the actual player character are copied using __InstantiatingItemSlotClone__ scripts.
