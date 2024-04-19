@@ -12,6 +12,8 @@ This is the second scene players encounter in the hero demo. They reach it after
   <img src="/assets/images/hero/heroInland.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=1396" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Entry
 
 Decides between three different Parameter values.

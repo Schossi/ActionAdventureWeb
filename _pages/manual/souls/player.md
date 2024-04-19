@@ -6,7 +6,7 @@ sidebar:
   nav: manual
 ---
 
-The following is an overview of the SoulsPlayer prefab in the AdventureSouls demo.
+The following is an overview of the SoulsPlayer prefab in the [AdventureSouls]({% link _pages/demos/demoSouls.md %}) demo.
 
 - [SoulsPlayer](#soulsplayer)
   - [Pivot](#pivot)

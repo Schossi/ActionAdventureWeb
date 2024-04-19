@@ -12,6 +12,8 @@ sidebar:
   <img src="/assets/images/hero/heroDebug.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=2061" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Features a wide variety of items and objects. The hero character starts with a filled inventory and equipped items.
 
 The white spheres in front of the destructible bushes contain lock on points which can be used to test out the lock on system. The slightly larger sphere also contains an test action that can be started as a context action whenever it is locked on. This could theoretically be used to read signs from a distance or talk to NPCs sitting out of regular action area reach.

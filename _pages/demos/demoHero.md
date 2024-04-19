@@ -21,3 +21,7 @@ sidebar:
 |First Person|Page Up|RStick Press|
 
 The Debug button on the Title screen leads to a scene which demonstrated a lot of the features in a more condensed form.
+
+A breakdown of the major parts of the demo can be found in written form in the [manual]({% link _pages/manual/hero/setup.md %}) and in the following video.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2AB8p22nCxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -12,6 +12,8 @@ In this scene the player evades a rolling boulder to get to a chest containing t
   <img src="/assets/images/hero/heroCanyon.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=1729" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Boulder
 
 During the intro cutscene the boulder is deactivated until the camera pans over to it. This is only done to make timing it a bit easier. It is controlled by the custom __HeroBoulder__ script which moves it between the points defined in the __Points__ field. When it reaches one of those points it fires the __Stopped__ event and then waits for the __CornerDelay__.

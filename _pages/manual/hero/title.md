@@ -12,6 +12,8 @@ The Title screen lets players select game slots to create new games or continue 
   <img src="/assets/images/hero/heroTitle.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=970" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The __Background__ of the screen is made using a __CinemachineDollyCart__ that runs on a looping __CinemachineSmoothPath__.
 
 ## Logic

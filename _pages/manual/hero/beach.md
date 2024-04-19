@@ -12,6 +12,8 @@ This is the game scene players enter when they first start a game. It plays a sh
   <img src="/assets/images/hero/heroBeach.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=1110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Entry
 
 When the scene is loaded a couple different things can happen. This is configured in the __ScriptMachine__ in the __Entry__ object. It checks if the intro has already been played using the __Beach_Intro__ persisted bool. If it has not it starts the __TimelineAction__ in __Intro__. Otherwise it checks the string persisted under __Parameter__. If a "1" is found it starts the __HeroEnter__ subgraph that moves the player in through the trunk leading to the inland scene. Otherwise it starts the __HeroWake__ __TimelineAction__ which quickly fades the screen in from black. This usually happens if the player has died.

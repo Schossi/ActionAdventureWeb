@@ -29,3 +29,5 @@ sidebar:
 |Confirm  |Enter    |A          |
 
 The Debug button on the Title screen leads to a scene which demonstrated a lot of the features in a more condensed form.
+
+A breakdown of the major parts of the demo can be found in the [manual]({% link _pages/manual/souls/player.md %}).

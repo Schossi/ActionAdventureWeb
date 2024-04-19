@@ -6,11 +6,13 @@ sidebar:
   nav: manual
 ---
 
-The following is an overview of the HeroSetup prefab in the AdventureHero demo.
+The following is an overview of the HeroSetup prefab in the [AdventureHero]({% link _pages/demos/demoHero.md %}) demo.
 
 <p align="center">
   <img src="/assets/images/hero/heroSetup.png" />
 </p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=27" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - [HeroSetup](#herosetup)
   - [Camera](#camera)
@@ -53,7 +55,7 @@ HeroSetup also contains the scenes variables for [Visual Scripting]({% link _pag
 
 ### Camera
 
-This objects contains the main __Camera__ and __CinemachineBrain__ as well as a couple different virtual cameras.  
+This object contains the main __Camera__ and __CinemachineBrain__ as well as a couple different virtual cameras.  
 
 The __Flash__ and __Hurt__ cameras have a timeline that very shortly switches to them resulting in Red and White flashes of the screen. They are triggered by FLASH and HURT messages on the character. HURT is sent from the __HeroCharacter__ state machine when damage occurs. FLASH is sent on start by a script machine in the __HeroNutImpact__.  
 
@@ -124,7 +126,7 @@ it was made in code as it performs some bone rotations that would be a hassle in
 it gets started by the __HeroPlayerCharacter__ which also instantiates the visual of the item
 - __Die__ is another __TimelineAction__ that is started from the __HeroCharacter__ visual graph
 - __Climb__ is a custom action that lets the player climb up some special surfaces  
-double click the script to check it out in Visual Studio, like most classes in CCBK it has an explanation at the top of the file, examples for climbable surfaces are found in HeroDebuggingClimbing or the HeroBeach and HeroInland scenes
+double click the script to check it out in Visual Studio, like most classes in AAK it has an explanation at the top of the file, examples for climbable surfaces are found in HeroDebuggingClimbing or the HeroBeach and HeroInland scenes
 
 #### Inventory
 
@@ -134,7 +136,7 @@ Both __Sword__- and __ShieldSlot__ are of type __instantiatingItemSlot__. The Sh
 
 The equipment slots use a fairly simple custom slot called __HeroEquipmentSlot__ which instantiates the action prefab defined on the __HeroEquipmentItem__. The instance of that action is then checked to determine if the slot can be used. The three regular slots are used from the equipment buttons that are visualized in the top right, the fourth slot called __EquipmentX__ is used when an item is used directly from the menu.
 
-The inventory also defines some item capacities. These are be raised when the player collects a __CapacityRaisingItem__ like the Nut Bag or Money Pouch. There is no place to collect these in the regular game yet but they can be tested in __HeroDebuggingGeneral__
+The inventory also defines some item capacities. These are raised when the player collects a __CapacityRaisingItem__ like the Nut Bag or Money Pouch. There is no place to collect these in the regular game yet but they can be tested in __HeroDebuggingGeneral__
 
 #### Status
 
@@ -142,7 +144,7 @@ This object contains a couple different components representing the characters s
 
 There is only a single [resource]({% link _pages/manual/content/resource.md %}) value in the __ResourcePool__ called health. It is decreased by __HeroHealthDamage__ and increased by usable items like the __HeroHeart__. The __HeroCharacter__ state machine initiates death when it runs out. 
 
-The [Attribute Pool]({% link _pages/manual/content/attribute.md %}) contains the __HearHearts__ attribute which is increased by collecting __HeroHeartEssence__ usable items. The __HeroHeartsMaximum__ stat copies that attribute and is used to determine the maximum health of the hero. This is configured in the ResourceMaximums field of the pool.
+The [Attribute Pool]({% link _pages/manual/content/attribute.md %}) contains the __HeroHearts__ attribute which is increased by collecting __HeroHeartEssence__ usable items. The __HeroHeartsMaximum__ stat copies that attribute and is used to determine the maximum health of the hero. This is configured in the ResourceMaximums field of the pool.
 
 There is an [Effect Pool]({% link _pages/manual/content/effect.md %}) even though there are currently no effects relevant to the player character. The currently only effect of the demo is called __HeroStunEffect__ and is added to enemies when their __HeroStun__ resource is filled by the __HeroStunDamage__ done in __HeroNutImpact__. You can quickly try that out in the HeroDebuggingSkeleton scene.
 

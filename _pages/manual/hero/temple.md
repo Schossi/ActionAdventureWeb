@@ -20,6 +20,8 @@ The final room is another arena containing a bigger skeleton with increased heal
   <img src="/assets/images/hero/heroTemple.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2AB8p22nCxY?si=vv9DEYz7YAJD5mCv&amp;start=1784" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Passages
 
 The temple scene uses a couple different variants of the __HeroPassage__ prefab. It is basically a door with an action for each side that moves the player to the other side. Check out the [HeroDebuggingPassage]({% link _pages/manual/hero/debug.md %}) debug scene for various examples of passage setups including one for the base prefab that just lets players walk through without any special behaviour.
@@ -32,7 +34,7 @@ The __HeroTarget__ visual script on __HeroPassageTarget__ attaches to the Damage
 
 ## Block
 
-The __HeroBlock__ lets player move it by using on of the __HeroBlockAction__ actions located at each side. For some other examples of using this prefab, like falling down or activating a switch, check out the [HeroDebuggingBlock]({% link _pages/manual/hero/debug.md %}) debug scene.
+The __HeroBlock__ lets player move it by using one of the __HeroBlockAction__ actions located at each side. For some other examples of using this prefab, like falling down or activating a switch, check out the [HeroDebuggingBlock]({% link _pages/manual/hero/debug.md %}) debug scene.
 
 One notable difference in the activation of this action is that it ends once the button that activated it is released. This is detected using the CONTEXT_ACTION_RELEASE message which is sent from the __HeroCharacter__ state machine inside the setup prefab.
 
