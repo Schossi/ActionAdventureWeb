@@ -40,9 +40,17 @@ sidebar:
   - [Movement](#movement)
   - [Persistence](#persistence)
   - [Damage](#damage)
+- Hero
+  - [Setup](#hero-setup)
+  - [Title](#hero-title)
+  - [Beach](#hero-beach)
+  - [Inland](#hero-inland)
+  - [Canyon](#hero-canyon)
+  - [Temple](#hero-temple)
+  - [Debug](#hero-debug)
 - Souls
-  - [Player](#soulsplayer)
-  - [Scenes](#soulsscenes)
+  - [Player](#souls-player)
+  - [Scenes](#souls-scenes)
 
 <div style="page-break-after: always;"></div>
 
@@ -108,6 +116,41 @@ sidebar:
 
 # Damage  
 {% include_relative content/damage.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Setup  
+{% include_relative hero/setup.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Title  
+{% include_relative hero/title.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Beach  
+{% include_relative hero/beach.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Inland  
+{% include_relative hero/inland.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Canyon  
+{% include_relative hero/canyon.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Temple  
+{% include_relative hero/temple.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Debug  
+{% include_relative hero/debug.md %}  
 
 <div style="page-break-after: always;"></div>  
 
