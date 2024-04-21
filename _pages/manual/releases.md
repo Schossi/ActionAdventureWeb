@@ -6,6 +6,24 @@ sidebar:
   nav: manual
 ---
 
+## 1.5.3
+
+Additions to Documentation and minor fixes
+
+### ADDED
+
+- HeroDemo manual pages(written + video)
+  - detailed HeroSetup prefab explanation
+  - individual description for each scene
+- title screen background sound
+
+### FIXED
+
+- money visualizer in title screen
+- camera damping when switching LockOn
+- woosh sound missing audio group
+- removed obsolete nodes in canyon script machine
+
 ## 1.5.2
 
 Hero demo audio and UI improvements
