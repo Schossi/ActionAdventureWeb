@@ -15,6 +15,8 @@ manual:
     children:
       - title: "Release Notes"
         url: /manual/releases
+      - title: "API"
+        url: https://adventureapi.softleitner.com/
   - title: "How To"
     children:
       - title: "Getting Started"
