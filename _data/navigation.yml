@@ -65,3 +65,9 @@ manual:
         url: /manual/souls-player
       - title: "Scenes"
         url: /manual/souls-scenes
+  - title: "Other"
+    children:
+      - title: "Extras"
+        url: /manual/extras
+      - title: "Utilities"
+        url: /manual/utilities

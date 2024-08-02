@@ -30,6 +30,10 @@ The Core Framework of AAK, always import this one.
 
 Contains test scenes for various features, can be useful to try out those features in isolation. Import while exploring AAK but should not be included in production.
 
+### AdventureExtras
+
+Contains additional examples that use assets from the other demos. For example scenes that demonstrate how different objects can be reused between demos. An explanation for these can be found [here]({% link _pages/manual/other/extras.md %}). Since extras are built on top of the other demos these also have to be imported and I recommend exploring them individually first.
+
 ### AdventureHero
 
 Contains the [hero]({% link _pages/demos/demoHero.md %}) demo, import if you want to start by adapting this demo.  

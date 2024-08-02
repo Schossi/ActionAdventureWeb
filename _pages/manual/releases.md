@@ -6,6 +6,10 @@ sidebar:
   nav: manual
 ---
 
+## 1.6.0
+
+COMING SOON
+
 ## 1.5.3
 
 Additions to Documentation and minor fixes
