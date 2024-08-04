@@ -8,7 +8,36 @@ sidebar:
 
 ## 1.6.0
 
-COMING SOON
+### ADDED
+
+- [PlayableAnimation]({% link _pages/manual/other/utilities.md %})  
+play animations on top of an animator using the playables api  
+this enables configuring animations directly on character actions  
+see the PlayableAnimationTest test scene for simple examples
+- [HeroSouls and SoulsHero]({% link _pages/manual/other/extras.md %})  
+example scenes that show how assets from one demo may be used in the other  
+makes heavy use of PlayableAnimation, found in AdventureExtras
+- ItemNotifications  
+UI behaviour that shows new items which is used in ManualItem and the new extras
+- CharacterActor custom Editor  
+inspector shows active actions and allows ending them in play mode
+
+### IMPROVED
+
+- HelpUrl  
+clicking the ? button on an AAK behaviour will now open the API documentation
+- Unity 6 compatibility  
+  - added default lighting data for debug scenes
+  - velocity changed to linearVelocity for Unity 6 and above
+
+### CHANGED
+
+- Action.EndAction only calls the actor when IsHappening is true
+- MinimalCharacterActor checks Action.CanStart
+
+### FIXED
+
+- TriggerArea firing twice when destroyed during enter with multiple colliders
 
 ## 1.5.3
 

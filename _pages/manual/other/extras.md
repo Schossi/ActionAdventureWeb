@@ -21,7 +21,9 @@ Some changes have been made to the setup to work better with souls assets. The c
 - scaled the character model up to 1.2 to fit better with the souls assets
 - set the key of the generic trigger item on the player to __PLY__ which identifies the player in the souls demo(for example in the moving platform)
 - increased the size of the lock on collider because lock on distance is determined by the player area in souls
+- added MessageEvents SHEATHEA and SHEATHEI which can be used to sheathe items from non hero actions
 - added a ResourceBarManager to the UI so enemy health bars are shown
+- added ItemNotifications so items picked up are shown(souls items don't have the hero pickup dialog)
 - added gear and equipment buttons in the UI for the items brought over from souls(sword, shield, flask, bow)
 - added the HeroSouls items to the inventory so they can be tested in the scene
 
@@ -45,6 +47,8 @@ The dummies in the scene use the HeroHealth resource instead of the souls one so
 
 The key needed to open the door has been replaced by the key from the hero demo so it shows up in the hero UI.
 
+In the door right in front that does not require a key a SHEATHEA message is sent on start which makes the hero put away its items.
+
 ## SoulsHero
 
 As the name indicates this is the inverse of the HeroSouls example. Here assets from the hero demo are used by the souls character. Once again changes made are detailed below
@@ -58,9 +62,10 @@ As the name indicates this is the inverse of the HeroSouls example. Here assets 
 - scaled the character model down to 0.8 to fit better with the hero assets
 - set SortByDistance on the action area so the character picks up closer (for example)pots first
 - added OverheadItem transform as replacement for the ItemParentOverhead in the hero demo
-- added the Climb action so the character can climb walls in the hero demo  
+- added the Climb action so the character can climb walls in the hero demo
 the climb action is also added to the RecoveryActions array on the Stamina resource so the character recovers stamina while climbing, otherwise they would not be able to jump off if they enter climbing on low stamina
 - added the SoulsHero items to the inventory so they can be tested in the scene
+- added ItemNotifications so items picked up are shown(pickups don't have the souls pickup dialog)
 
 ### Weapons
 
