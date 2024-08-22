@@ -51,6 +51,9 @@ sidebar:
 - Souls
   - [Player](#souls-player)
   - [Scenes](#souls-scenes)
+- Other
+  - [Extras](#extras)
+  - [Utilities](#utilities)
 
 <div style="page-break-after: always;"></div>
 
@@ -161,3 +164,13 @@ sidebar:
 
 # Souls Scenes  
 {% include_relative souls/scenes.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Extras  
+{% include_relative other/extras.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Utilities  
+{% include_relative other/utilities.md %}  
