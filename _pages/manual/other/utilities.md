@@ -55,3 +55,35 @@ By default animation clips play once and then end the playable animation. This c
 </p>
 
 When an animation controller ends is a bit harder to determine than an animation clip. The EndState field can be used to define one or more state names at the end of which the playable animation ends itself.(separate multiple using spaces) Otherwise it has to be done from outside, for example some actions use a END message on one of the animations to determine that the animation has ended.
+
+## Dialogs
+
+AAK comes with a generalized dialog component for displaying simple messages, conversations and dialogs. There are implementations for legacy Unity Text components(DialogUI), the more common TextMeshPro Text component(DialogTMP) and the newer UI Toolkit system(DialogElement).
+
+They are used in both the Hero and Souls demos to display various messages and dialogs. The MSG dialog in souls displays general message and the PCK dialog is shown from the SoulsPickupAction. In Hero the MAIN(empty key) dialog is used for pickup animations, a Fullscreen FULL dialog is shown on GameOver and a SIGN dialog displays the texts defined in the Signs around the stages.
+
+Dialogs are shown by calling one of the Show method overload or by using a Visual Scripting Unit like ShowDialog which just call those methods under the hood. You can find various examples in the VisualScriptingDialog test scenes in AdventureCore.Tests.
+
+Another way to show dialog is through Timeline. Add a DialogTrack to your Timeline to do so. DialogClips can be added to the Track to define the text to display. Hide and Show Clips can be used to fade the dialog in and out. This can be used to display Text in Cutscenes or short Sequences(Hero Demo opening Chest). The Dialog Implementation can be directly referenced in the Track or through its Key in the individual Clips. Check out the TimelineDialog test scenes in AdventureCore.Tests for examples.
+
+While the built in Dialogs may work well for simple messages and short dialogs, for more dialog heavy games a dedicated dialog language may be a good choice. If this is the case for you please check out the [Ink Integration](https://github.com/Schossi/AAK_Ink).
+
+## State Manager
+
+A StateManager component can be used to define various states and things that happens when the active state changes from one to another. Each state defined has events for when it is Entered and Exited. The Started event is called when the state becomes active at the start of the scene. The distinction between Entered and Started is made because some states may want to play animations when entered but not when started.
+
+The state of a manager can either be set directly by using SetState or by setting an override. Overrides become the active state and return the manager to its underlying state when they are reset. This can be done through code, by using one of the visual scripting units or using the dedicated timeline track.
+
+The Hero demo uses one StateManager for general game state like PLAY, MENU, CUTSCENE, DIALOG. Its states set the current InputActionMap, transition the sound mixer and change cursor lock among various other functions. They also control the state of the second StateManager(HUD) which manages the action buttons on the top right. 
+
+Some ways the main state manager in the hero demo has its state changed are:
+- PlayerInput(HeroCharacter) Pause Action sets the state to MENU
+- SIGN Dialog Opening sets DIALOG as an override, Closing resets it
+- HeroIntroBeach timeline overrides the main state to CUTSCENE
+- HeroChest timeline overrides the HUD state to HIDE and DIALOG
+
+## Audio Manager
+
+The AudioManager component can be used to centralize audio clips. It allows defining clips and music that can be played sending the defined key. By hooking it up to a characters MessageReceived event this allows playing sounds on the character from actions that are defined outside of it. Another use case is UI, instead of playing sounds on all the individual component the audio manager allows defining and changing them in one central location.
+
+The Hero demo uses AudioManager components in its UI and in all of the characters. There are also audio managers in the sword and shield prefabs which hook up to the owning characters message pipeline using a CharacterMessenger component. This allows playing different sounds for sword swings and shield blocks depending on the characters current equipment. The S_SWING message for example is sent from events in the attack animations(HeroKidAttackVA, VB, ...).
