@@ -6,6 +6,27 @@ sidebar:
   nav: manual
 ---
 
+## 1.7.0
+
+### IMPROVED
+
+- Dialog Overhaul  
+dialogs are now used across both demos and also replace the timeline textbox
+character delay, options buttons, text arrays, event system focus, ...  
+check out VisualScriptinDialog/Conversation and TimelineDialog scenes in AdventureCore.Tests
+more complex dialog in SoulsDebuggingNPCs, readable sign on floor in SoulsDebuggingGeneral
+- Playable Animation Preview  
+playable animations can be previewed directly in the parameter inspector
+some actions(button, object, ...) can show preview across objects(player and door for example)  
+check it out in the PlayableAnimationTest scene and demo scenes like SoulsDebuggingInteraction
+- Game Focus and Cursor Lock handling unified in FocusHelper  
+improves focus handling especially in the editor
+- Predefined Searches for Characters and Managers(Ctrl+K > see left bar)
+- StateManager, AudioManager and Dialogs sections in the manual Utilities page
+- Hero Demo UI polish
+- Unity 6 compatibility 
+- various minor fixes
+
 ## 1.6.0
 
 ### ADDED
