@@ -6,6 +6,14 @@ sidebar:
   nav: manual
 ---
 
+## 1.7.1
+
+### FIXED
+- issue in input binding texts when enable disable was called repeatedly
+- input binding texts not switching to gamepad in hero title
+- texts sometimes not completely finishing in timeline dialogs
+- wrong loading scene name in souls demo when switching stages on death
+
 ## 1.7.0
 
 ### IMPROVED
