@@ -96,6 +96,19 @@ __AdventureSouls__
 - [ProBuilder](https://docs.unity3d.com/Packages/com.unity.probuilder@5.0/manual/index.html) used to build the environments
 - [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) for some optional custom enemy behaviors
 
+#### About Cinemachine Version 3
+
+Currently AAK is compatible with both Cinemachine Versions 2 and 3. The Code is switched between versions using the CINEMACHINEV3 predefine in the AdventureCore and AdventureHero assembly definitions. To keep compatibility with Unity 2021 the project initially comes with a dependency to Cinemachine Version 2.
+
+How to upgrade to Cinemachine Version 3:
+- upgrade the package from the __Package Manager__ window. 
+- open a scene that contains cinemachine cameras like HeroDebuggingGeneral and look for the CinemachineVirtualCamera on the FreeLookCamera object
+- click __Upgrade entire Project to Cinemachine 3__ to let cinemachine exchange all the old components for new ones([docs](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachineUpgradeFrom2.html#upgrading-the-project-data))
+- remove the CinemachineInputAxisController components from the cameras as inputs are driven by AAK
+- on the __LockableCameraFreeLook__ inside the character set the __FreeLook__ and the __FirstPersonCamera__(hero demo only) fields
+
+Support for Version 2 will probably be dropped when Unity 2021 goes out of support at which point I plan to migrate the demos to Version 3 fully.
+
 ## Manual
 
 This manual is meant to explain the concepts and ideas of AAK rather then any specific detailed API. For more detailed explanations of every class in the core framework and most of the demo please consult the code itself. I try to give a detailed explanation for the purpose of the class in the xml-doc of the class itself and explain every field of the behaviors in the tooltip.  

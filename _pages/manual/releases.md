@@ -6,6 +6,27 @@ sidebar:
   nav: manual
 ---
 
+## 1.7.2
+
+### IMPROVED
+- reworked bars for resources and new bars for effects  
+used in the ManualResource scene and the souls demo(+transition for boss health bar)
+- cinemachine 3 compatibility(v2 is still used by default)  
+to upgrade check 'About Cinemachine Version 3' in the Manual Overview page
+- resource values now have a Minimum field  
+souls Stamina and Poise have a negative minimum so lag is longer for big attacks
+
+### CHANGED
+- messages on core actions(motion, object, ...) are now configured in the inspector  
+these(START, ACT, END, ...) used to be defined as const in code  
+the roll action in souls now uses ROLL_START instead of START which -  
+prevents overlaps with other actions since roll in souls can release early
+- turn animation in souls demo no longer stops movement making the player more agile
+- attacks in souls demo now send START later to avoid overlaps with other animations
+
+### FIXED
+- masked clips did not work in playable animations
+
 ## 1.7.1
 
 ### FIXED
