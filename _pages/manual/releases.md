@@ -6,6 +6,31 @@ sidebar:
   nav: manual
 ---
 
+## 1.7.3
+
+### ADDED
+- basic UI for items and inventory(see ManualItem scene)
+
+### CHANGED
+- reorganized UI scripts into separate folder
+- souls attack suspend movement on start messages instead of dmg
+- moved start messages of punches back to dmg
+
+### IMPROVED
+- minor inventory and item rework
+  - add and remove can be done partially and return remaining
+  - listed inventory exposes observable collection
+  - additional xml docs
+- separate game state for hero game over
+- separate field for hit format in resource bars 
+- item notifications now support legacy texts
+
+### FIXED
+- unfocusing dialogs by clicking in hero
+- getting stuck in hero game over screen
+- broken barrier collider in hero beach 
+- lowered damage modifier on shield punch to 2 instead of 10
+
 ## 1.7.2
 
 ### IMPROVED
