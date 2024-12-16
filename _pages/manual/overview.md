@@ -96,6 +96,25 @@ __AdventureSouls__
 - [ProBuilder](https://docs.unity3d.com/Packages/com.unity.probuilder@5.0/manual/index.html) used to build the environments
 - [Visual Scripting](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/index.html) for some optional custom enemy behaviors
 
+#### About Universal RP
+
+AAK does not have a hard dependency on URP but it is the render pipeline the demos and manual projects use out of the box. The following steps show how the asset could be switched over to built-in.
+- Import the entire asset(including packages and settings) into a fresh project
+- Activate the Build-in Render Pipeline
+  - Select Edit > Project Settings > Quality.
+  - For each quality level, if an asset is assigned to the Render Pipeline field, unassign it.
+  - Select Edit > Project Settings > Graphics.
+  - If an asset is assigned to the Scriptable Render Pipeline Setting field, unassign it.
+- Open a scene of the demo you want to switch over(for example HeroDebuggingGeneral)
+  - Switch over materials from URP to their built-in counterpart
+    - Universal Render Pipeline/Lit > Standard  
+    HeroFade and SoulsFade need RenderMode Transparent
+    - Universal Render Pipeline/Particles/Unlit > Particles/Standard Unlit
+  - objects in the scene should go from pink to their actual color
+- Open the Package Manager and remove the 'Universal RP' package  
+
+For additional information about render pipelines please see [unity documentation](https://docs.unity3d.com/6000.0/Documentation/Manual/srp-setting-render-pipeline-asset.html).
+
 #### About Cinemachine Version 3
 
 Currently AAK is compatible with both Cinemachine Versions 2 and 3. The Code is switched between versions using the CINEMACHINEV3 predefine in the AdventureCore and AdventureHero assembly definitions. To keep compatibility with Unity 2021 the project initially comes with a dependency to Cinemachine Version 2.
