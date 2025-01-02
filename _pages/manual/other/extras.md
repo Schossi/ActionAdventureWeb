@@ -84,3 +84,19 @@ SoulsHero also contains some changed version of the heart and money items in her
 All the different pickups have been modified to add appropriate items. For example the heart essences use SoulsHeroHeartEssence which adds SoulsVitality that increases the souls characters health.
 
 The HeroBlock has had some changes to the grab actions. Holding and Releasing the grab does not work in the souls demo and therefore the __InputType__ is changed to __Perform__. To keep other actions from being started while the character is grabbing the block a SoulsSuspendActing instructions is added which disables the Act input. 
+
+## SoulsHeroApe
+
+This scene contains the Ape boss fight from the hero demo but adjusted to fit in with the souls demo. The souls setup is left unchanged. The ape boss is placed in a souls boss arena, its logic is controlled by a custom character script instead of visual scripting. When defeated it spawns a ragdoll instead of playing a cutscene.
+
+<p align="center">
+  <img src="/assets/images/other/soulsHeroApe.png" />
+</p>
+
+Just like the morning star boss the SoulsHeroApe character script inherits from SoulsCharacterBase for some common functionality like defense calculation. It implements its own guard break logic which lets players parry the left and right punch attacks. There is no critical follow up attack, instead the ape has its energy reset which makes it take a rest action that lets players heal or attack.
+
+The behavior of the ape is done using different IEnumerable sequences of actions. Whenever the apes actor goes idle and the current sequence contains no more actions it selects a new one. If its energy is low is can select a rest or wag action to recover some energy. Otherwise it will randomly select an attack action which will reduce the energy counter.
+
+Ragdoll creation for the ape differs from regular characters because its model is scaled. For the joints of the ragdoll to work properly in this case it has to be disabled before the scale it applies. This is done be creating a temporary disabled gameobject the ragdoll is instantiated inside of at first.
+
+Since there are no bombs in the souls demo all the breakable models and triggers of the ape have been removed. The triggers and colliders have also been changed since the souls demo uses different layers. The health and damage assets have also been replaced by the ones from the souls demo. 

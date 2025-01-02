@@ -57,6 +57,8 @@ manual:
         url: /manual/hero-canyon
       - title: "Temple"
         url: /manual/hero-temple
+      - title: "Glade"
+        url: /manual/hero-glade
       - title: "Debug"
         url: /manual/hero-debug
   - title: "Souls"

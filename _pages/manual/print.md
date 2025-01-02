@@ -47,6 +47,7 @@ sidebar:
   - [Inland](#hero-inland)
   - [Canyon](#hero-canyon)
   - [Temple](#hero-temple)
+  - [Glade](#hero-glade)
   - [Debug](#hero-debug)
 - Souls
   - [Player](#souls-player)
@@ -149,6 +150,11 @@ sidebar:
 
 # Hero Temple  
 {% include_relative hero/temple.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Hero Glade  
+{% include_relative hero/glade.md %}  
 
 <div style="page-break-after: always;"></div>  
 

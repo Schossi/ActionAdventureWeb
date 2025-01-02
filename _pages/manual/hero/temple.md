@@ -14,7 +14,7 @@ There they move a block in order to reach another chest that contains the sling 
 
 The sling lets players open the third room in the entrance by shooting the target above it. Behind it they find chests containing the superior knight versions of the sword and shield. 
 
-The final room is another arena containing a bigger skeleton with increased health. The chest behind it contains a heart essence that increases their maximum health.
+The final room is another arena containing a bigger skeleton with increased health. The chests behind it contain heart essences that increase their maximum health. The passage behind it leads to the glade scene with its ape boss fight.
 
 <p align="center">
   <img src="/assets/images/hero/heroTemple.png" />

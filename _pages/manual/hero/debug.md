@@ -91,3 +91,23 @@ The small platforms behind the player are climbable but too small to actually cl
 </p>
 
 This scene is made to test the ground checker located in the sound transform in [HeroSetup]({% link _pages/manual/hero/setup.md %}). The check is triggered whenever the character receives a STEP message and should play a different sound for each of the ground colors in the scene.
+
+## Ape
+
+<p align="center">
+  <img src="/assets/images/hero/heroDebugApe.png" />
+</p>
+
+Use this scene to test out the actual fight portion of the ape boss fight. The state manager of the ape is set to its ACTION state which makes it immediately start attacking without playing its cutscene. The equipment of the hero can easily be changed in its inventory so the fight can quickly be tested with different items. Additional information about the boss fight can be found on the [glade]({% link _pages/manual/hero/glade.md %}) manual page. 
+
+## Projectile
+
+<p align="center">
+  <img src="/assets/images/hero/heroDebugProjectile.png" />
+</p>
+
+This scene contains a spawner that instantiates projectiles which move towards the player. These projectiles can be redirected while guarding with the knight shield. This is controlled by the DeflectedDamages field on shield items. The BlockedDamages and GuardAngle of shields can also easily be tested in this scene. Deflection is done in the CheckDamage method of the HeroGuardAction which is called in the PreDamageReceive damage step of the HeroPlayerCharacter.
+
+The projectiles can also be redirected with sword attacks. This is done using a TriggerDamageReceiver on the projectile itself which redirects the projectile in its Damaged event. By changing the called action there from Redirect to RedirectBack it could be changed to fly straight back where it came from instead of being redirected in the damage direction.
+
+The two HeroTarget objects left and right of the spawner are triggered when hit with damage. Guard with the shield and aim at a target to redirect the projectile to them and trigger them. This could be used for puzzles in an actual game but is not currently used in any of the regular demo scenes.
