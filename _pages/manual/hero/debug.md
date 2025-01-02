@@ -92,6 +92,8 @@ The small platforms behind the player are climbable but too small to actually cl
 
 This scene is made to test the ground checker located in the sound transform in [HeroSetup]({% link _pages/manual/hero/setup.md %}). The check is triggered whenever the character receives a STEP message and should play a different sound for each of the ground colors in the scene.
 
+The checker performs a raycast downwards from its own position to get the material and texture coordinate it reads the color from. For this to work the Read/Write checkbox in the textures import settings needs to be checked.
+
 ## Ape
 
 <p align="center">
