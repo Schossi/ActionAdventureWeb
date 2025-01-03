@@ -113,3 +113,17 @@ This scene contains a spawner that instantiates projectiles which move towards t
 The projectiles can also be redirected with sword attacks. This is done using a TriggerDamageReceiver on the projectile itself which redirects the projectile in its Damaged event. By changing the called action there from Redirect to RedirectBack it could be changed to fly straight back where it came from instead of being redirected in the damage direction.
 
 The two HeroTarget objects left and right of the spawner are triggered when hit with damage. Guard with the shield and aim at a target to redirect the projectile to them and trigger them. This could be used for puzzles in an actual game but is not currently used in any of the regular demo scenes.
+
+## Parcour
+
+<p align="center">
+  <img src="/assets/images/hero/heroDebugParcour.png" />
+</p>
+
+This scene demonstrates some alternate types of movement that are not currently used in the regular demo.
+
+The script machine on .../Actor/Jump/AutoJump automatically forces a jump whenever the character leaves the ground. It only does this when it is not already jumping or climbing and the movement factor forwards is not full so the player can still walk off ledges slowly or backwards. the FALLING custom event is triggered from the CharacterControllerMovement.Falling event via a VisualScriptingHelper. Additional limitations to Auto-Jumping may be needed depending on the application, for example when the character is damaged.
+
+Regular jumping is still enabled in addition to auto-jumping in this scene, to get an even more classic feel the jump could be removed from the PlayerInput event that triggers it.
+
+The Climb action has its PullUpWithoutClimb field checked which allows the action to pull up onto arbitrary surfaces without a climbing trigger or having to climb first. When the field is checked the action looks for obstacles and performs the pullup raycasts, as indicated by the green lines in the scene view, before pulling up on surfaces.
