@@ -12,6 +12,8 @@ In this scene the player fights an ape that is controlled by an evil mask. It ju
   <img src="/assets/images/hero/heroGlade.png" />
 </p>
 
+In addition to the boss itself there are two smaller changes to the player character. The CharacterController has some settings changed to avoid it stepping onto the boss. Depending on the game these settings could be used in the entire game but some of the geometry in other scenes works better with some step up distance. The LockOn CycleLock toggle is set On in order to let the player easily switch between the two points in the boss.
+
 ## State
 
 The overall state of the boss fight is controlled by the StateManager on the HeroApe GameObject which has the APE key. 
