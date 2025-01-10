@@ -109,7 +109,8 @@ AAK does not have a hard dependency on URP but it is the render pipeline the dem
   - Switch over materials from URP to their built-in counterpart
     - Universal Render Pipeline/Lit > Standard  
     HeroFade and SoulsFade need RenderMode Transparent
-    - Universal Render Pipeline/Particles/Unlit > Particles/Standard Unlit
+    - Universal Render Pipeline/Particles/Unlit > Particles/Standard Unlit  
+    select the Particle-Default texture in albedo and adjust the modes
   - objects in the scene should go from pink to their actual color
 - Open the Package Manager and remove the 'Universal RP' package  
 
@@ -135,6 +136,8 @@ This manual is meant to explain the concepts and ideas of AAK rather then any sp
 The manual pages for the core systems of AAK are always split into a Core part that explains the idea behind the system and a Souls part that covers how the system was used in that demo.
 
 The Souls and Hero sections at the end of the manual contain some additional information about how the demo are set up and how they may be extended.
+
+Additionally the 'About' button in the scene view leads to documentation relevant to the currently open scene. 
 
 ## Integrations
 

@@ -6,7 +6,62 @@ sidebar:
   nav: manual
 ---
 
+## 1.8.0
 
+### ADDED
+- Ape Boss Fight  
+  - new scene called HeroGlade in Hero Demo  
+  scene is entered from the temple and the new end point of the demo  
+  intro and death cutscenes, various attacks, destructible rock armor  
+  state machine based attack logic can easily be tested in HeroDebuggingApe
+  - souls variant of the fight available in Extras/SoulsHeroApe  
+  fully code based logic, new approach using randomly selected action enumerables
+  - uses new NavMeshTankMovement that first rotates and then moves forward
+- ImpactItem and ImpactArea that spawn different particles and sounds when colliding  
+  - swords in hero demo now have an item, destructible rocks an area(ROCK)
+  - longsword and fists in souls have an item
+- additional debug scenes in hero demo demonstrating features not otherwise used
+  - HeroDebuggingProjectile showcases deflectable projectiles 
+  - HeroDebuggingParcour makes the player auto-jump and pull up without climbing
+- About button in the scene view opens relevant documentation for the current scene 
+
+### IMPROVED
+- hero and souls guard actions now guard directionally  
+angle can be configured on SoulsGuardAction and HeroShieldWeapon item  
+damage is guarded when its direction is counter the shield direction  
+it is also guarded when the sender is a character in front of the receiver
+- hitstop of 0.1s for melee weapons in hero and souls demos  
+message is sent from damage senders in weapons to message event in character
+- Idling event on actors that fires when the actor runs out of actions
+- additional effects in hero demo  
+sounds and particles on guard(see HeroDebuggingProjectile)
+dust particles when stepping on dirt or sand(see HeroDebuggingGround)
+- LockOnManager can be configured to Cycle  
+used in ape boss fight because the points are vertical not horizontal
+- VisualScriptingHelper can be used to fire custom events from unity events  
+used in ape boss fight to send RAGE event when mask is damaged
+- OverruleCanStartMode in actors changes when CanStart prevents actions
+
+### CHANGED
+- PlayableAnimation runs in GameTime update mode by default  
+new Unscaled toggle makes it run in UnscaledGameTime
+- presenting items in hero now pauses the game using PauseGameInstruction  
+consequently the following adjustments were made to other parts of the demo
+  - chest action starts sheathing animation in unscaled update mode
+  - cinemachine brain in hero now runs unscaled
+  - timelines used in item presentation now run unscaled
+- replaced more built in materials with dedicated ones for better pipeline switching
+- SphereDamageSender now only collides with triggers
+- CharacterController.Fallen event is also fired upwards and renamed to Landing
+- hero pull up animation end message changed from END to CLIMB_END
+- damage sender SendOnce setting only sends damage once per character  
+in addition to once per receiver, needed as ape boss has multiple receivers
+
+### FIXED
+- pose action not working with identical start and end messages
+- exception in dialogs during edit mode
+- warnings in souls demo during character death
+- ui navigation not working in unity 2021 for some dialogs and souls buttons
 
 ## 1.7.3
 

@@ -6,7 +6,7 @@ sidebar:
   nav: demos
 ---
 
-<iframe frameborder="0" src="https://itch.io/embed-upload/11581112?color=333333" allowfullscreen="" width="1220" height="880"><a href="https://softleitner.itch.io/aak-adventuresouls-demo">Play AAK AdventureHero Demo on itch.io</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed-upload/12461302?color=333333" allowfullscreen="" width="1220" height="880"><a href="https://softleitner.itch.io/aak-adventuresouls-demo">Play AAK AdventureHero Demo on itch.io</a></iframe>
 
 |         |KB+M     |Gamepad    |
 |---------|---------|-----------|

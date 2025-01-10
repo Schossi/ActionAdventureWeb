@@ -6,7 +6,7 @@ sidebar:
   nav: manual
 ---
 
-This is the currently final scene of the demo. Upon entering the player is faced with two blocked off passages and one open one. 
+This used to be the final scene of the demo prior to update 1.8 which added the HeroGlade scene with the ape boss fight. Upon entering the player is faced with two blocked off passages and one open one. 
 
 Entering that passage they are locked in with a skeleton enemy. Upon defeating that enemy they can collect a key item from a chest that lets them unlock one of the other rooms accessible from the center. 
 
