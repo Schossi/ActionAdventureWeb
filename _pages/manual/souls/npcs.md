@@ -38,6 +38,10 @@ The objects within the enemy prefabs are on the Enemy, EnemyBody and EnemyDamage
 
 ## SoulsZombie
 
+<p align="center">
+  <img src="/assets/images/souls/soulsZombie.png" />
+</p>
+
 This is the most common enemy in the souls demo. It can be customized by changing up the weapon it holds or the attack it uses and by changing its idle action. You can find a couple different variations of the basic zombie enemy in the SoulsDungeon stage and the SoulsDebuggingEnemies debug scene. 
 
 Basic zombies do not have an inventory of their own. You can give them a weapon by just dragging a weapon prefab into the WeaponRight/Left objects and assigning the attack action on the character. Don't forget to adjust the layer of the damage object of the weapon accordingly.
@@ -50,9 +54,17 @@ The SoulsDebuggingVisualScripting debug scene contains two implementation of the
 
 ## SoulsSprout
 
+<p align="center">
+  <img src="/assets/images/souls/soulsSprout.png" />
+</p>
+
 This is a very basic example for an enemy that is more of a creature rather than a humanoid enemy. Otherwise it works very similarly to the basic zombie enemy and also uses the SoulsEnemyCharacter script. It has a single attack action that activates a spherical damage sender which sends ticks of SoulsPoisoningDamage.
 
 ## SoulsFriend
+
+<p align="center">
+  <img src="/assets/images/souls/soulsFriend.png" />
+</p>
 
 SoulsFriend is used as a basis for the SoulsTalker and SoulsTrader prefab variants an not usable on its own. The variants add different interaction actions and visual models to the prefab.
 
@@ -61,6 +73,10 @@ The Interaction object in the base prefab already contains a trigger collider th
 These characters use the SoulsFriendCharacter script which has an internal aggro counter. On the first hit the character tries to equip whatever fitting weapon it has in its inventory to its right weapon slot. On the second hit it starts attacking back. This deactivates the IdleObjects object which contains the trading/talking action. It also activates the AggroObject which contains a lock-on point.
 
 ## SoulsMorningstarBoss
+
+<p align="center">
+  <img src="/assets/images/souls/soulsMorningstar.png" />
+</p>
 
 In addition to the character itself this prefab also contains the logic of the boss arena. For more information about the boss arena see the boss arena chapter in the [scenes]({% link _pages/manual/souls/scenes.md %}) manual page.
 

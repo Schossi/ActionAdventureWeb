@@ -10,6 +10,10 @@ sidebar:
 
 The Title scene is where the player should first arrive, this is the case as long as it is at the first place in the build settings. It is where the player can create  new games or load existing ones.  
 
+<p align="center">
+  <img src="/assets/images/souls/soulsTitle.png" />
+</p>
+
 - __Title__  
 UI for the different save slots that are used to create new games and load them
 - __NewGame__  
@@ -22,6 +26,10 @@ Holds all the 3d models in the background which are purely cosmetic
 
 ## Loading
 
+<p align="center">
+  <img src="/assets/images/souls/soulsLoading.png" />
+</p>
+
 This scene gets loaded when a player loads a save from the title or when using a teleport action. The __SoulsLoading__ script starts loading the target main scene asynchronously. After that it can be configured to wait for player confirmation by setting a UIDocument or to wait for a playable director if that is set. When those are done it additively loads the Temp scene and activates the loaded Main scene.
 
 In the demo loading is always done pretty much immediately because it uses very little assets. The scene is meant as an example for games that grow large enough to warrant it. If you don't need it simply use SwitchScene instead of LoadScene from the title screen and empty the loading scene parameter in teleport actions.
@@ -29,6 +37,10 @@ In the demo loading is always done pretty much immediately because it uses very 
 As mentioned above the actual levels in the demo are split into a main and a temp scene. This is done to simplify the reset process when the player sits down at a bonfire which reloads the temp scene. Therefore the environment, bonfires, managers, lighting and things like that belong in main while enemies and destructibles should be placed in temp. It may make sense to put bigger assets from the temp scene into main too just so it is part of the loading process.
 
 ## Dungeon
+
+<p align="center">
+  <img src="/assets/images/souls/soulsDungeon.png" />
+</p>
 
 The dungeon stage, in classic games fashion, starts the player off in a prison cell. After freeing themselves by using a key that has dropped into the cell in the intro they collect some basic equipment while going through the stage and finally defeat a boss which unlocks a teleport to the next stage.
 
@@ -86,6 +98,10 @@ The boss character itself has a couple attacks which are all defined by timeline
 When the boss is defeated the boss area resumes persistence and sets a flag so the state can be restored later. It also activates the teleporter that can be used to move to the shrine stage.
 
 ## Shrine
+
+<p align="center">
+  <img src="/assets/images/souls/soulsShrine.png" />
+</p>
 
 ### Bottom
 

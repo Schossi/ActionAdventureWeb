@@ -25,6 +25,10 @@ The following is an overview of the SoulsPlayer prefab in the [AdventureSouls]({
   - Sound
   - LockOn
 
+<p align="center">
+  <img src="/assets/images/souls/soulsPlayer.png" />
+</p>
+
 ## SoulsPlayer
 
 The main transform contains the following components.

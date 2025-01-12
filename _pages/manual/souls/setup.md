@@ -8,6 +8,10 @@ sidebar:
 
 The following is an overview of the SoulsSetup prefab in the [AdventureSouls]({% link _pages/demos/demoSouls.md %}) demo. This prefab contains all the components required for the gameplay of the demo.
 
+<p align="center">
+  <img src="/assets/images/souls/soulsSetup.png" />
+</p>
+
 ## SoulsSetup
 
 The first component in SoulsSetup is the SoulsCommons component. This component can be seen as the general game manager of the demo. It contains such general logic as scene loading and switching. It also holds references to common attributes, resources, stats and damages. SoulsCommons is a Singleton and accessible through the static Instance variable. This allows for example checking damage types by comparing incoming damage to SoulsCommons.Instance.PhysicalDamage.
