@@ -63,8 +63,12 @@ manual:
         url: /manual/hero-debug
   - title: "Souls"
     children:
+      - title: "Setup"
+        url: /manual/souls-setup
       - title: "Player"
         url: /manual/souls-player
+      - title: "NPCs"
+        url: /manual/souls-npcs
       - title: "Scenes"
         url: /manual/souls-scenes
   - title: "Other"

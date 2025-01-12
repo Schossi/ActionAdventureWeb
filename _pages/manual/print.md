@@ -50,7 +50,9 @@ sidebar:
   - [Glade](#hero-glade)
   - [Debug](#hero-debug)
 - Souls
+  - [Setup](#souls-setup)
   - [Player](#souls-player)
+  - [NPCs](#souls-npcs)
   - [Scenes](#souls-scenes)
 - Other
   - [Extras](#extras)
@@ -163,8 +165,18 @@ sidebar:
 
 <div style="page-break-after: always;"></div>  
 
+# Souls Setup  
+{% include_relative souls/setup.md %}  
+
+<div style="page-break-after: always;"></div>  
+
 # Souls Player  
 {% include_relative souls/player.md %}  
+
+<div style="page-break-after: always;"></div>  
+
+# Souls NPCs  
+{% include_relative souls/npcs.md %}  
 
 <div style="page-break-after: always;"></div>  
 

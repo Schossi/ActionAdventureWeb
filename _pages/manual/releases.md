@@ -41,6 +41,8 @@ used in ape boss fight because the points are vertical not horizontal
 - VisualScriptingHelper can be used to fire custom events from unity events  
 used in ape boss fight to send RAGE event when mask is damaged
 - OverruleCanStartMode in actors changes when CanStart prevents actions
+- expanded souls demo documentation and full souls demo video
+- additional xml comments and class summaries
 
 ### CHANGED
 - PlayableAnimation runs in GameTime update mode by default  

@@ -94,7 +94,7 @@ The specific Actor implementation used is the __BufferedCharacterActor__ which w
 - __Roll__ is started by the SoulsPlayerCharacter when dodge is pressed and the input direction is not neutral, in the Starting/Ending events in the inspector you can see that it activates a damage while it is active.(the damage has value 0 so it destroys boxes but does not hurt enemies)
 - __Dodge__ is started by the SoulsPlayerCharacter when dodge is pressed and the input direction is neutral
 - __Jump__ is directly bound to the Act.Jump input by SoulsPlayerCharacter
-- Stagger is started by the SoulsCharacterBase base class that the player has in common with the enemies when the character runs out of poise from being hit
+- __Stagger__ is started by the SoulsCharacterBase base class that the player has in common with the enemies when the character runs out of poise from being hit
 - __GuardBreak__ is started by the SoulsCharacterBase when a character guards and runs out of stamina or it is parried while attacking
 - __Death__ is started by SoulsPlayerCharacter when it gets hit and health runs out, notice the SignalReceiver which calls the ResetDeath method
 
