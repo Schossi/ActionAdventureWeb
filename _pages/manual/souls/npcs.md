@@ -8,6 +8,8 @@ sidebar:
 
 The following is an overview of the different prefabs used for NPCs in the [AdventureSouls]({% link _pages/demos/demoSouls.md %}) demo.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ozp06rPjKhc?si=6lLpwHS51cOqTSzV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The different character script used in souls all share some common behavior which is implemented in the following inheritance tree.
 
 - SoulsCharacterBase  
@@ -30,8 +32,8 @@ The object hierarchy of NPCs is very similar to the one of the player as explain
 
 - __Root__ - character, movement, persistence 
   - __Model__ - visual model
-  - __Actor__ - actor and actions
-  - __Metrics__ - resources and attributes
+  - __Actor__ - actor, actions
+  - __Metrics__ - resources, attributes, effects
   - sounds, ...
 
 The objects within the enemy prefabs are on the Enemy, EnemyBody and EnemyDamage layers. For details on how these work see the [damage]({% link _pages/manual/content/damage.md %}) manual page.

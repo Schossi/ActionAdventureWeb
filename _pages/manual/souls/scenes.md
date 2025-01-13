@@ -14,6 +14,8 @@ The Title scene is where the player should first arrive, this is the case as lon
   <img src="/assets/images/souls/soulsTitle.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ozp06rPjKhc?si=yDWHjj1wcqndmJBi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 - __Title__  
 UI for the different save slots that are used to create new games and load them
 - __NewGame__  
@@ -129,4 +131,4 @@ When the elevator starts moving it activates a CharacterCarrierArea which repare
 
 The NPCs at the Top use the same persistence key as the ones at the bottom so their values will carry over. The only exception is movement which uses a different persister on the ones at the top so the position does no carry over.
 
-Finally the top also contains a teleported that leads back to the dungeon stage. This teleporter has TeleportTarget set so the player will be moved to that transform in the dungeon stage.
+Finally the top also contains a teleporter that leads back to the dungeon stage. This teleporter has TeleportTarget set so the player will be moved to that transform in the dungeon stage.

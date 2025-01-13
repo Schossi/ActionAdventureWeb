@@ -29,6 +29,8 @@ The following is an overview of the SoulsPlayer prefab in the [AdventureSouls]({
   <img src="/assets/images/souls/soulsPlayer.png" />
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ozp06rPjKhc?si=smAlvU1DngYQNc_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## SoulsPlayer
 
 The main transform contains the following components.
@@ -36,7 +38,6 @@ The main transform contains the following components.
 - [SoulsPlayerCharacter]({% link _pages/manual/content/character.md %})
 - [ManualPersister]({% link _pages/manual/content/persistence.md %}) used to save any state related to the player
 - [CharacterControllerMovement]({% link _pages/manual/content/character.md %}) and the CharacterController it uses
-- [MovementSaver]({% link _pages/manual/content/persistence.md %}) automatically saves the movement data
 - Rigidbody and CapsuleCollider which are used by
   - GenericTriggerItem with Key PLY which triggers GenericTriggerAreas in the environment(for example the traps in the dungeon)
   - CharacterActionArea which is used by the character to detect and start actions in the environment(doors, chests, ...)

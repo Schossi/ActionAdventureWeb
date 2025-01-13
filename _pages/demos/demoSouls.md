@@ -31,3 +31,5 @@ sidebar:
 The Debug button on the Title screen leads to a scene which demonstrated a lot of the features in a more condensed form.
 
 A breakdown of the major parts of the demo can be found in the [manual]({% link _pages/manual/souls/player.md %}).
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ozp06rPjKhc?si=cGvab2rdGOQk4TQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
