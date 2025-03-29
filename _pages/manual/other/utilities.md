@@ -56,6 +56,51 @@ By default animation clips play once and then end the playable animation. This c
 
 When an animation controller ends is a bit harder to determine than an animation clip. The EndState field can be used to define one or more state names at the end of which the playable animation ends itself.(separate multiple using spaces) Otherwise it has to be done from outside, for example some actions use a END message on one of the animations to determine that the animation has ended.
 
+## Trigger Areas
+
+The TriggerArea and TriggerItem behaviors included in AAK offer a convenient layer on top of regular unity triggers. They make sure trigger events happen exactly once and that triggers that are disable get removed reliably. They always come in a item-area pair which also filters out a lot of usually unwanted triggers.
+
+The basic functionality of these triggers is defined in the abstract TriggerArea and TriggerItem base classes. AAK offers a very general implementation of these in GenericTriggerArea and GenericTriggerItem. These add unity events that can be used in the inspector as well as ways to add instructions and send messages to characters attached to the area or item. They also let users define a Key which is used to filter which areas and items interact with each other.(in addition to regular unity layers) For and example see the __AdventureManual/Systems/Trigger/ManualTrigger__ example scene.
+
+Two more specific usages of triggers inside AAK are the lock on and damage systems. The LockOnManager implements TriggerArea and LockOnPoints is a TriggerItem. TriggerDamageSender is the most common type of damager sender and derives from TriggerArea while TriggerDamageReceiver is derived from TriggerItem.
+
+It is fairly easy to create your own triggers with special behavior, see the example below:
+
+```
+public class CustomTriggerArea : TriggerArea<CustomTriggerArea, CustomTriggerItem>
+{
+    protected override void onItemAdded(CustomTriggerItem item)
+    {
+        base.onItemAdded(item);
+
+        //your custom logic
+    }
+
+    protected override void onItemRemoved(CustomTriggerItem item)
+    {
+        base.onItemRemoved(item);
+
+        //your custom logic
+    }
+}
+public class CustomTriggerItem : TriggerItem<CustomTriggerArea, CustomTriggerItem>
+{
+    protected override void onAreaAdded(CustomTriggerArea area)
+    {
+        base.onAreaAdded(area);
+
+        //your custom logic
+    }
+
+    protected override void onAreaRemoved(CustomTriggerArea area)
+    {
+        base.onAreaRemoved(area);
+
+        //your custom logic
+    }
+}
+```
+
 ## Dialogs
 
 AAK comes with a generalized dialog component for displaying simple messages, conversations and dialogs. There are implementations for legacy Unity Text components(DialogUI), the more common TextMeshPro Text component(DialogTMP) and the newer UI Toolkit system(DialogElement).

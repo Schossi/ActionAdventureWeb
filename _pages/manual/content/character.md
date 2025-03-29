@@ -21,7 +21,7 @@ CharacterBase has explicit fields for AttributePool and ResourcePool since these
 
 A CharacterInstruction defines some type of state change for a character in a way that can be set and reset. This is done to deal with situation where multiple systems modify the same properties without knowing about each other. For example modifications to the movement speed or the visibility of an item slot. AdventureCore defines some useful general instructions like multipliers for attributes or stats and suspending damages, collisions or movement. See the header of the different instructions for a more detailed explanation of each one.  
 
-CharacterInstruction(or CharacterInstruction[]) can be used as an inspector field despite being abstract because AdventureCore comes with a PropertyDrawer that allows choosing the actual implementation in the inspector.  
+CharacterInstruction(or CharacterInstruction[]) can be used as an inspector field despite being abstract because AdventureCore comes with a PropertyDrawer that allows choosing the actual implementation in the inspector. An overview of all the available instructions can be found in [the api documentation](https://adventureapi.softleitner.com/class_adventure_core_1_1_character_instruction_base.html).  
 
 ## Souls
 
