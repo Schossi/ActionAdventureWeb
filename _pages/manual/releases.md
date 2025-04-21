@@ -6,6 +6,70 @@ sidebar:
   nav: manual
 ---
 
+## 1.9.0
+
+### ADDED
+- __Arena Demo__  
+new roguelike mini game added to extras project  
+beat increasingly difficult stages of enemies to earn essence currency  
+spend essence in shop between stages on a set of randomly selected items
+- DamageModifier for changing sent and received damage  
+available on characters, trigger damage senders and receivers  
+can also be applied by instructions and may use stats for their value  
+used in arena demo to grant bonus damage based on character strength
+- DamageMessage for triggering events and sending messages  
+allow filtering based on damage kind and value  
+available on characters, trigger damage senders and receivers  
+used in arena to only send hurt message when affected by health damage
+- ActionItemSlot for instantiating items with one action  
+action can be started by binding input to slot, used for weapon slot in arena demo
+- UsableItemSlot for usable items that may be instantiated during action   
+item can be used by binding input to slot, used for quick slots in arena demo
+- PurchaseAction for exchanging items, attributes, resources for items(arena shops)
+- AnimatorMovementSetter for setting movement parameters on animator
+- instructions for min and max movement speed  
+min speed is used to give roll in arena forward speed when standing still
+- Fader component for easily fading camera and sound in and out(arena scene transition)
+
+### IMPROVED
+- SuspendMovementInstruction can be set to still ApplyPhysics  
+used in arena, prevents enemies from clipping into player while performing attacks
+- PersistenceContainer can now buffer data between scenes  
+used in arena so data is only loaded in title and only saved on stage win
+- ProjectileDamageSender now has methods to directly instantiate  
+used in arena demo for sling and bow projectiles
+- LockOnManager additional setting CalculateCenter  
+needed when the camera is not centered on the character
+- CharacterAssociation can be set to search character automatically
+- RootMotion can be disabled on CharacterControllerMovement
+- RootMotion can be enabled on NavMeshAgentMovement
+- ListedInventoryPanel filter by ItemSet
+- PlayableAnimation with controllers can now also define Start- and EndTime
+- hover over character message('Last 20 Messages') in inspector for stack trace
+- InputBindingText can now define Overrides based on control scheme  
+used in arena to display WASD for Move composite action input
+
+### CHANGED
+- character initializes movement, inventory and pools in its Awake  
+this ensures everything is ready before any Start is called
+- damage direction SenderToReceiver now calculates direction from character to character  
+additional mode SenderTransformToReceiver goes sender transform to receiver character
+- minor rework of NavMeshAgentMovement Approach methods  
+can now also approach a Vector3 target  
+new NavAwayAction makes enemies run away from target
+- SphereDamageSender only sends damage once per character  
+would previously be sent once for each collider regardless of character
+- CharacterControllerMovement calculates SpeedSideways based on target direction
+
+### FIXED
+- MotionAction going into release state with Release unchecked
+- wrong message in object action preview
+- playable animation preview not resetting properly
+- SoulsHeroApe ragdoll being pushed properly by lethal damage
+- playable animation not working when started in Next
+- temp resource bars not being properly removed on character death
+- added default color animation to hero animator to properly reset color after damage
+
 ## 1.8.0
 
 ### ADDED

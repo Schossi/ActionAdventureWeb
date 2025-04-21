@@ -174,3 +174,7 @@ Finally we will take care of [persisting]({% link _pages/manual/content/persiste
 Instead of manually choosing keys you can also click 'Generate Missing Keys' on the persistence container which will generate keys if they are empty.
 
 Since the container should be set to AutoSave and AutoLoad by default everything you do in play mode should now be saved. When you stop play mode and start it again the state will be loaded. You can reset the state by clearing player prefs or deleting data from the container. If you want suspend persistence and start from scratch every time you can unassign the Saver on the container.
+
+## Next
+
+You should now be familiar with the major systems in AAK. As a next step towards a more complete game you can check out the AdventureArena demo found in the [Extras]({% link _pages/manual/other/extras.md %}) project. It is meant as a middle ground of complexity between the mechanics shown here and the relatively sophisticated hero and souls demos.

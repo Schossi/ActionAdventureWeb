@@ -9,6 +9,8 @@ demos:
     url: /demos/hero
   - title: "Souls"
     url: /demos/souls
+  - title: "Arena"
+    url: /demos/arena
 manual:
   - title: "Overview"
     url: /manual

@@ -32,7 +32,9 @@ Contains test scenes for various features, can be useful to try out those featur
 
 ### AdventureExtras
 
-Contains additional examples that use assets from the other demos. For example scenes that demonstrate how different objects can be reused between demos. An explanation for these can be found [here]({% link _pages/manual/other/extras.md %}). Since extras are built on top of the other demos these also have to be imported and I recommend exploring them individually first.
+Contains additional examples that use assets from the other demos. For example scenes that demonstrate how different objects can be reused between demos. An explanation for these can be found [here]({% link _pages/manual/other/extras.md %}). Since extras are built on top of the other demos these also have to be imported and I recommend exploring them individually first.  
+
+The AdventureArena demo found in the extras is a good next step up from the getting started tutorial. It shows basic usage of AAK in a full game without the added complexities of the hero or souls demos respective genres.
 
 ### AdventureHero
 
@@ -149,7 +151,7 @@ All GitHub repositories related to my unity assets can be found in the [Softleit
 
 ## Roadmap
 
-The next update will continue to polish and build out the Hero Demo and its Documentation.
+The next updates will focus on expanding and polishing existing components of the asset. Expect patch releases rather than major upgrades.
 
 ## Feedback
 

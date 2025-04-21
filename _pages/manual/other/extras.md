@@ -6,6 +6,46 @@ sidebar:
   nav: manual
 ---
 
+The AdventureExtra project in AAK contains different examples that may use assets from all the other projects. Therefore to try one of these be sure to always import the entire asset.
+
+## Arena
+
+Arena is a minigame that combines assets from all the other projects to create something new. Players fight enemies in increasingly difficult stages and upgrade their character in a shop between stages. The options in the shop are randomly selected to provide some variation between runs. The game is playable [here]({% link _pages/demos/demoArena.md %}).
+
+<p align="center">
+  <img src="/assets/images/other/arenaTitle.png" />
+</p>
+
+Persistence is done a little differently from other demos. Loading is only done in the title screen and Saving is only done whenever a player beats a stage. Data like player equipment and health is kept between scenes using the new Buffer toggle on the PersistenceContainer. This also makes debugging scenes more convenient as disabling loading to start fresh like in souls or hero is not needed.
+
+<p align="center">
+  <img src="/assets/images/other/arenaStage.png" />
+</p>
+
+The enemies spawned in the stages can easily be configured in the inspector. Their behavior is defined in simple visual graphs. Currently this includes a simple melee enemy that runs up and attacks, a ranged enemy that runs away if the player gets too close and another variation of the ape boss. When all enemies are beat the stage awards bonus points for each second under par time and then loads the shop.
+
+<p align="center">
+  <img src="/assets/images/other/arenaShop.png" />
+</p>
+
+In the shop players can exchange the essence they earned in the stages for useful upgrades. The items offered here include:
+- Weapons Equipment Items that each have on attack action
+  - Melee weapons like sword and morning star
+  - Ranged weapons like sling and shortbow
+- Usable items that are removed when used  
+these have to be equipped to one of the 3 usable slots
+  - shielder and booster add temporary effects
+  - potion heals damage
+  - bombs does aoe damage
+- Attribute upgrades(check attributes in pause screen)
+  - Strength gives bonus damage
+  - Endurance increases max stamina
+  - Vitality increases max health
+- Trinkets that are instantiated on the player and add an effect
+  - Skeleaton Skull for bonus damage
+  - Aromativ Herb for stamina recovers
+  - ...
+
 ## HeroSouls
 
 This example demonstrates how assets from the souls demo may be used in the hero demo. The scene was made by duplicating the SoulsDebuggingGeneral scene and replacing the SoulsSetup with HeroSetup. Other changes made are detailed below. A big part of making actions reusable between demos is the PlayableAnimation which is described on the [utilities]({% link _pages/manual/other/utilities.md %}) manual page.
@@ -99,4 +139,6 @@ The behavior of the ape is done using different IEnumerable sequences of actions
 
 Ragdoll creation for the ape differs from regular characters because its model is scaled. For the joints of the ragdoll to work properly in this case it has to be disabled before the scale it applies. This is done be creating a temporary disabled gameobject the ragdoll is instantiated inside of at first.
 
-Since there are no bombs in the souls demo all the breakable models and triggers of the ape have been removed. The triggers and colliders have also been changed since the souls demo uses different layers. The health and damage assets have also been replaced by the ones from the souls demo. 
+Since there are no bombs in the souls demo all the breakable models and triggers of the ape have been removed. The triggers and colliders have also been changed since the souls demo uses different layers. The health and damage assets have also been replaced by the ones from the souls demo.  
+
+Death will not work properly in this scene because it does not have a Temp scene that is usually used to reset enemies. Therefore the enemies and the boss will just keep attacking after death.

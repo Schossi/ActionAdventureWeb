@@ -27,6 +27,8 @@ In the inspector for __PersistenceContainer__ you can find some useful helper bu
 
 As mentioned above the container does not save to disk itself, instead it references a __PersistenceSaverBase__ for that purpose. This is done so that the 'device-facing' part of persistence is easily replaceable as I anticipate it might have to be customized depending on the built platform and other factors.     
 
+Since objects access persistence in __Awake__ the loading has to be done before any other Awake calls happen. This means that the object initially triggering Load(PersistenceContainer, SoulsCommons) needs to have a lowered __Script Execution Order__. The upside of this is that we can be sure that all objects are done loading when Start is called. 
+
 ## Souls
 
 State in AdventureSouls is split into a couple different areas. __SoulsSystemPersistence__ is a global area independent of the save slot that is used for settings like the sound effects volume but also to save a short info structure for every save index that is displayed in the title screen. __SoulsPlayerPersistence__ is just used by the player character, the player gets its own area because it is saved quite frequently. The __SoulsPermanentPersistence__ is used to save permanent world state like collected items or pulled levers. Lastly __SoulsTemporaryPersistence__ is where any state resides that is discarded whenever the player changes the level or sits at a bonfire. It contains the state of the enemies and destructible environment objects.  
