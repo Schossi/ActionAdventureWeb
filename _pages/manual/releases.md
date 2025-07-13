@@ -6,6 +6,25 @@ sidebar:
   nav: manual
 ---
 
+## 1.9.1
+
+### ADDED
+- TiledInventory stores items in a 2d grid  
+example in new ManualItemTiled scene
+- ItemValue can be used to store persisted values with inventory items  
+could be used to store things like battery charge or item durability  
+example in new ManualItemValues scene
+
+### IMPROVED
+- minor rework of ai movements  
+new NavMeshSteerMovement as a compromise between agent and tank movement  
+more uniform behaviour between agent, steer and tank movements
+- set rotation in CharacterControllerMovement using OnRotate  
+arena demo uses this for twin stick controls, disable by unbinding rotate
+- new settings for auto equip new items or unequip empty items in inventory  
+items are now auto equipped in the hero and souls demos
+- new debug scene HeroDebuggingBlackout demonstrates reset if character falls
+
 ## 1.9.0
 
 ### ADDED

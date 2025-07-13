@@ -28,6 +28,18 @@ The Inventory of a Character also acts as the access point for its ItemSlots.
 
 ItemSlots enable Items to be equipped to and interact with a character. Deriving from ItemSlot and overriding equip and unequip is the recommended way to create a new kind of ItemSlot. Since they are in scene and exist by character ItemSlots can take care of any runtime data the item may produce when equipped(visuals, effects, ...).
 
+AdventureCore includes a couple simple default slot implementations:
+- GenericItemSlot  
+does nothing itself, items are equipped or not, any actual logic may come from the items  
+for example EquipmentItem for raising stats, attributes or adding effects while equipped
+- InstantiatingItemSlot(Arena Trinkets)  
+only works with PrefabItem, instantiates the prefab while an item is equipped
+  - ActionItemSlot(Arena Weapons)  
+  looks for an action on the instantiated prefab and allows binding input to it
+- UsableItemSlot(Arena Usables)  
+uses items equipped to it, for example UsableItem can add resources or attributes  
+if the PrefabItem has a Prefab with an action it instantiates it and performs the action(eg drinking animation)
+
 ## Souls
 
 ### Armor

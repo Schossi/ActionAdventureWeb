@@ -46,6 +46,8 @@ these have to be equipped to one of the 3 usable slots
   - Aromativ Herb for stamina recovers
   - ...
 
+Update 1.9.1 added __twin stick__ controls to arena, to change this back to regular walking simply remove or unbind the __Rotate__ action in the inputs.
+
 ## HeroSouls
 
 This example demonstrates how assets from the souls demo may be used in the hero demo. The scene was made by duplicating the SoulsDebuggingGeneral scene and replacing the SoulsSetup with HeroSetup. Other changes made are detailed below. A big part of making actions reusable between demos is the PlayableAnimation which is described on the [utilities]({% link _pages/manual/other/utilities.md %}) manual page.

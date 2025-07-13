@@ -129,3 +129,19 @@ The script machine on .../Actor/Jump/AutoJump automatically forces a jump whenev
 Regular jumping is still enabled in addition to auto-jumping in this scene, to get an even more classic feel the jump could be removed from the PlayerInput event that triggers it.
 
 The Climb action has its PullUpWithoutClimb field checked which allows the action to pull up onto arbitrary surfaces without a climbing trigger or having to climb first. When the field is checked the action looks for obstacles and performs the pullup raycasts, as indicated by the green lines in the scene view, before pulling up on surfaces.
+
+## Blackout
+
+This debug scene shows how a character may be reset if it falls under the world by clipping of falling in some kind of pit. The Barrier that usually prevents this is disabled in this scene and a trigger area that starts the blackout has been placed underneath. This is not used in other scenes of the demo currently as there are no pits or other ways to jump off. The blackout works as follows.
+
+- character walks off
+- character Trigger Item enters Blackout Trigger Area
+- Blackout Trigger Area sends BLACKOUT message to character
+- Message Event on Character force starts Blackout Timeline Action
+- Blackout Timeline blacks out camera
+- Blackout Timeline sends HeroBlackout signal
+- Signal Receiver handles signal and teleports character
+- Blackout Timeline removes black from camera
+- on Blackout Action Ending damage is send to character
+
+To use the blackout in an actual scene simply add a blackout trigger area to the scene. Also make sure the transform in the HeroCharacter signal receiver is in a safe position.
