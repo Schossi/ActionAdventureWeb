@@ -6,6 +6,14 @@ sidebar:
   nav: manual
 ---
 
+## 1.9.2
+
+### CHANGED
+- reserialization of all prefabs and scenes
+
+### FIXED
+- issues with missing instructions
+
 ## 1.9.1
 
 ### ADDED
