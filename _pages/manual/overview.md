@@ -143,6 +143,7 @@ Additionally the 'About' button in the scene view leads to documentation relevan
 
 ## Integrations
 
+- [Netcode for GameObjects](https://github.com/Schossi/AAK_Multiplayer) multiplayer
 - [SceneConnector](https://github.com/Schossi/ConnectorSouls) multi scene management
 - [Ink](https://github.com/Schossi/AAK_Ink) narrative scripting language
 - [KinematicCharacterController](https://github.com/Schossi/AAK_KinematicCharacterController)
