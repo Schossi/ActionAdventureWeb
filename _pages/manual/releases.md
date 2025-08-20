@@ -6,6 +6,25 @@ sidebar:
   nav: manual
 ---
 
+## 1.9.3
+
+Various smaller changes made for the Netcode for GameObjects integration example. The example contains an experimental multiplayer version of the Arena Demo. The project is called AAK_Multiplayer and can be found on [GitHub](https://github.com/Schossi/AAK_Multiplayer)!  
+
+### ADDED
+- surrogates for inventory, action area, resource and attribute pools  
+can be used to bind ui to elements of characters that spawn during gameplay
+
+### IMPROVED
+- new methods and visual scripting units for targeting closest player or enemy
+- piercing field in projectile damage sender so projectile is not destroyed on impact 
+- arena demo screen fade in is delayed by a couple frames to mask loading 
+
+### FIXED
+- system even unit not unsubscribing when flow is disabled
+- mixup of GetSlot and GetEmptySlot
+- bad namespaces for modify damage instructions  
+instructions might have to be reassigned
+
 ## 1.9.2
 
 ### CHANGED
