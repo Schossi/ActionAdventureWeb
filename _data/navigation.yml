@@ -11,6 +11,8 @@ demos:
     url: /demos/souls
   - title: "Arena"
     url: /demos/arena
+  - title: "Isle"
+    url: /demos/isle
 manual:
   - title: "Overview"
     url: /manual

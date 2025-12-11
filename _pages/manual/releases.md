@@ -6,6 +6,31 @@ sidebar:
   nav: manual
 ---
 
+## 1.9.4
+
+### ADDED
+- __Isle Demo__  
+new demo showcasing a simple 2d mobile game  
+on screen controls usable in game view with device simulator
+includes top down overworld and side scroller cave scene
+- SideScroller2DMovement  
+2d movement with gravity that can jump and climb ladders
+- TopDown2DMovement  
+2d movement that freely moves in all directions without gravity
+- DialogAction  
+new character action that shows a dialog and ends when it is finished
+- WanderAction  
+new character action that makes 2d movement walk in a random direction
+
+### IMPROVED
+- FadeAndDestroy now also works on SpriteRenderer
+- additional events and unity for damage sending
+- new ColorBlinker can visualize damage without needing animations
+- new duration in motion action can automatically end action
+
+### CHANGED
+- minimum recommended unity version increased to 2021.3.45
+
 ## 1.9.3
 
 Various smaller changes made for the Netcode for GameObjects integration example. The example contains an experimental multiplayer version of the Arena Demo. The project is called AAK_Multiplayer and can be found on [GitHub](https://github.com/Schossi/AAK_Multiplayer)!  
