@@ -6,6 +6,13 @@ sidebar:
   nav: manual
 ---
 
+## 1.9.5
+
+### FIXED
+- error in build due to testing assembly
+- item name display in hero present dialog
+- collisions when pushing blocks in unity 6
+
 ## 1.9.4
 
 ### ADDED
