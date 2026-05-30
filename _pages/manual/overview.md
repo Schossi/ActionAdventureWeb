@@ -42,7 +42,7 @@ Contains the [hero]({% link _pages/demos/demoHero.md %}) demo, import if you wan
 
 Start up Scenes/HeroTitle to __start the game from the title screen__ just like the demo does.  
 
-__IMPORTANT__, before playing the 'SaveSlot' app variable has to be added in visual scripting. Select the Logic Object in the Hierarchy and click 'Edit Graph' which opens the visual scripting graph. In the 'App' tab on the bottom left add a variable called 'SaveSlot' of type Integer with a default value of -1. This is needed to carry over the save slot between scenes.  
+__IMPORTANT__, before playing the 'SaveSlot' app variable has to be added in visual scripting. In the 'HeroTitle' scene select the Logic Object in the hierarchy and click 'Edit Graph' which opens the visual scripting graph. In the 'App' tab on the bottom left add a variable called 'SaveSlot' of type Integer with a default value of -1. This is needed to carry over the save slot between scenes.  
 
 Scenes/Debugging/HeroDebuggingGeneral is a __useful scene for testing__, some more specialized scenes can be found in the same folder  
 
@@ -118,19 +118,6 @@ AAK does not have a hard dependency on URP but it is the render pipeline the dem
 
 For additional information about render pipelines please see [unity documentation](https://docs.unity3d.com/6000.0/Documentation/Manual/srp-setting-render-pipeline-asset.html).
 
-#### About Cinemachine Version 3
-
-Currently AAK is compatible with both Cinemachine Versions 2 and 3. The Code is switched between versions using the CINEMACHINEV3 predefine in the AdventureCore and AdventureHero assembly definitions. To keep compatibility with Unity 2021 the project initially comes with a dependency to Cinemachine Version 2.
-
-How to upgrade to Cinemachine Version 3:
-- upgrade the package from the __Package Manager__ window. 
-- open a scene that contains cinemachine cameras like HeroDebuggingGeneral and look for the CinemachineVirtualCamera on the FreeLookCamera object
-- click __Upgrade entire Project to Cinemachine 3__ to let cinemachine exchange all the old components for new ones([docs](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachineUpgradeFrom2.html#upgrading-the-project-data))
-- remove the CinemachineInputAxisController components from the cameras as inputs are driven by AAK
-- on the __LockableCameraFreeLook__ inside the character set the __FreeLook__ and the __FirstPersonCamera__(hero demo only) fields
-
-Support for Version 2 will probably be dropped when Unity 2021 goes out of support at which point I plan to migrate the demos to Version 3 fully.
-
 ## Manual
 
 This manual is meant to explain the concepts and ideas of AAK rather then any specific detailed API. For more detailed explanations of every class in the core framework and most of the demo please consult the code itself. I try to give a detailed explanation for the purpose of the class in the xml-doc of the class itself and explain every field of the behaviors in the tooltip.  
@@ -149,10 +136,6 @@ Additionally the 'About' button in the scene view leads to documentation relevan
 - [KinematicCharacterController](https://github.com/Schossi/AAK_KinematicCharacterController)
 
 All GitHub repositories related to my unity assets can be found in the [Softleitner Extras](https://github.com/stars/Schossi/lists/softleitner-extras) list. I generally try to keep the main ones updated but some of the minor ones may be out of date.
-
-## Roadmap
-
-The next updates will focus on expanding and polishing existing components of the asset. Expect patch releases rather than major upgrades.
 
 ## Feedback
 

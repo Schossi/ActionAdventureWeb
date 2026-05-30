@@ -6,6 +6,16 @@ sidebar:
   nav: manual
 ---
 
+## 1.10.0
+minimum recommended unity version has been raised to 6000.0.76  
+
+### CHANGED
+- nav meshes are now created using NavMeshSurface
+- cinemachine upgraded to version 3  
+components in demos have also been upgraded  
+core code is still compatible with both versions 
+- various smaller adjustments for new unity version
+
 ## 1.9.5
 
 ### FIXED
