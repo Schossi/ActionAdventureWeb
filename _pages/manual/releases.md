@@ -6,6 +6,21 @@ sidebar:
   nav: manual
 ---
 
+## 1.10.1
+
+### FIXED
+- autoequip equipping already equipped items
+- error in player builds caused by editor code
+- some effects and items not loading correctly
+- tiered stats applying the wrong tier
+- state and audio managers with key '-' no longer register 
+- camera tilt not properly clamped in LockableCameraFreeLook
+- pickups being collected multiple times in some setups
+- SphereDamageSender applying its magnitude twice in up and right
+- lock on selecting the wrong target when cycling
+- tiled inventories not saving their layout properly
+- various minor fixes to ui and visual scripting units
+
 ## 1.10.0
 minimum recommended unity version has been raised to 6000.0.76  
 

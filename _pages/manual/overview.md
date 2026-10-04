@@ -142,3 +142,7 @@ All GitHub repositories related to my unity assets can be found in the [Softleit
 The quickest channels to reach me are mail and discord. Please feel free to reach out with any problems and questions. Feedback regarding the general direction of AAK and particular future features are also always welcome. Though I might not immediately be able to incorporate your requests I very much take them into consideration when planning out future updates.  
 
 If you can spare the time please consider leaving a review in the asset store.
+
+## Other
+
+AI skills for various basic aak tasks can be found in the [AAKSkills](https://github.com/Schossi/AAKSkills) github repo.
